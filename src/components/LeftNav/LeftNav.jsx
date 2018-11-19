@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavItem from '../NavItem/NavItem';
+import subitems from './navitems.json';
 import './LeftNav.css';
 
 
@@ -11,14 +12,10 @@ class LeftNav extends Component {
     this.butterflyImg = null;
     this.navmenu = null;
 
-    this.subitems = [];
-    this.subitems[1] = ["Children's Color", "Children's B&W", "Editorial Color", "Editorial B&W", "Digital", "Design", "Animation"];
-    this.subitems[2] = ["Welcome", "Skills", "Experience", "Education", "Awards"];
-    this.subitems[3] = ["My Clients", "Working with Me"];
-    this.subitems[4] = ["Contact Form"];
+    this.subitems = subitems;
 
     this.state = {
-      selectedItem: 1,
+      selectedItem: 0,
       selectedSubitem: 0
     };
   }
@@ -27,7 +24,6 @@ class LeftNav extends Component {
     return (
       <ul>
         {this.subitems.map((items, i) => {
-          console.log(i, this.state.selectedItem);
           return (
             <li key={i}>
               <NavItem items={items}

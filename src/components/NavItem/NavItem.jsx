@@ -3,10 +3,6 @@ import './NavItem.css';
 
 class NavItem extends Component {
 
-  constructor() {
-    super();
-  }
-
   render() {
     if (this.props.open) {
         return (
@@ -36,11 +32,6 @@ class NavItem extends Component {
         );
     }
   }
-
-  componentWillReceiveProps(props) {
-      console.log(props);
-  }
-
 }
 
 export default NavItem;

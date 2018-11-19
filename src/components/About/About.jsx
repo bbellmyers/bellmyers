@@ -6,9 +6,9 @@ class About extends Component {
     render() {
         return (
 <div>
-<h1><a name="skills"><img src="images/title_skills.gif" alt="Skills" width="71" height="34" border="0"/></a></h1>
+<h1><a name="skills" href="#/about/skills"><img src="images/title_skills.gif" alt="Skills" width="71" height="34" border="0"/></a></h1>
 
-<img class="home_portrait" src="images/mouse.jpg" alt="mouse illustrator" width="180" height="211" border="0"/>
+<img className="home_portrait" src="images/mouse.jpg" alt="mouse illustrator" width="180" height="211" border="0"/>
 
 <h2>Art Direction:</h2>
 <p>hire/fire freelance illustrators and designers; work with project managers/editors to ensure that projects are completed on time and within budget; supervise pre-press production including scans, color-correction, layout, cover design and typesetting; coordinate with printers and attend press-checks</p>
@@ -26,7 +26,7 @@ class About extends Component {
 <p>graphics applications: Adobe InDesign, Photoshop, Illustrator, QuarkXPress, Fractal Painter, Macromedia Director, DeBabelizer, Adobe Dimensions, Adobe Streamline, Barcode Pro, FTP protocols/Fetch</p>
 
 
-<h1><a name="experience"><img src="images/title_experience.gif" alt="Experience" width="139" height="34" border="0"/></a></h1>
+<h1><a name="experience" href="#/about/experience"><img src="images/title_experience.gif" alt="Experience" width="139" height="34" border="0"/></a></h1>
 
 <h2>Freelance Art Director, designer and illustrator 1990-present</h2>
 <h3>Darcy Bell-Myers Illustration & Design</h3>
@@ -53,7 +53,7 @@ class About extends Component {
 
 <p>I Prepared camera-ready art for catalogs. My duties included meeting with clients, typesetters and writers daily, as well as producing detailed paste-ups, shooting stats, cutting amber-lith overlays and specifying type.</p>
 
-<h1><a name="education"><img src="images/title_education.gif" alt="Education" width="126" height="34" border="0"/></a></h1>
+<h1><a name="education" href="#/about/experience"><img src="images/title_education.gif" alt="Education" width="126" height="34" border="0"/></a></h1>
 
 <h2>Minneapolis College of Art & Design</h2>
 BFA in Visual Communication, Graduated with honors 1989.
@@ -68,7 +68,7 @@ Society of Illustrators Symposium
 <h2>Hagen MicroAge</h2>
 Classes in Quark, Illustrator and Photoshop, Tutorial in Director
 
-<h1><a name="awards"><img src="images/title_awards.gif" alt="Awards &amp; Honors" width="207" height="34" border="0"/></a></h1>
+<h1><a name="awards" href="#/about/awards"><img src="images/title_awards.gif" alt="Awards &amp; Honors" width="207" height="34" border="0"/></a></h1>
 <ul>
 	<li>Minnesota Fringe Festival - "Higgledy Piggledy" adapted and performed at Theatre de la Jeune Leune 2007</li>
 	<li>Winner Best Picture Book, San Diego Book Awards "Higgledy Piggledy", illustration Attitude Press 2006</li>

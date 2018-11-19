@@ -1,12 +1,12 @@
-html, body, iframe { 
+html, body, iframe {
 	margin:0;
-	padding:0; 
-	height:100%; 
+	padding:0;
+	height:100%;
 }
 
 iframe {
-	display:block; 
-	width:100%; 
+	display:block;
+	width:100%;
 	border:none;
 }
 
@@ -47,4 +47,21 @@ a:visited {
 		background-image: url(images/back_leftbar.gif);
 		background-repeat: repeat-y;
 	}
+}
+
+.subheader, h2 {
+	FONT-SIZE: 14px; COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-WEIGHT: bold;
+	margin: 0;
+	padding: 1em 0 0;
+}
+
+.smallheader, h3 {
+	FONT-SIZE: 12px; COLOR:black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-WEIGHT: normal;
+	padding: 0 0 1em 0;
+	margin: 0;
+}
+
+p {
+	margin: 0 0 1em;
+	padding: 0px;
 }

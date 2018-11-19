@@ -30,13 +30,11 @@ class App extends Component {
               <a target="_top" href="index.html?page=home">
                 <img className="logo_name" src={logo_name} border="0" alt="Darcy Bell-Myers Illustration & Design"/>
               </a>
-              <p>
-                <a className="headerlink" onClick={() => this.decryptEmail()} href="javascript:void(0)">{this.email}</a>
-              </p>
               <div id="flyline">
-                  <img src={logo_flyline_1} width="34" height="51" alt="" />
-                  <img src={logo_flyline_2} width="248" height="29" alt="" />
-                </div>
+                <img src={logo_flyline_1} width="34" height="51" alt="" />
+                <img src={logo_flyline_2} width="248" height="29" alt="" />
+              </div>
+              <button className="headerlink" onClick={() => this.decryptEmail()}>{this.email}</button>
             </div>
             <div id="banner">&nbsp;</div>
             <button type="button" className="menubutton" onClick={() => this.showNavMenu(true)}></button>

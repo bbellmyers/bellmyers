@@ -1,0 +1,16 @@
+#!/bin/sh
+
+cp full_higpig_1.html full_FTMay2004.html
+cp full_higpig_1.html full_HigPig_cover.html
+cp full_higpig_1.html full_Reading-Readiness.html
+cp full_higpig_1.html full_Storybook-Parties-Curi.html
+cp full_higpig_1.html full_Storybook-Parties-Lion.html
+cp full_higpig_1.html full_StorybookParty.html
+cp full_higpig_1.html full_Teaching-real-Sculptur.html
+cp full_higpig_1.html full_egyptian_poem.html
+cp full_higpig_1.html full_ftcover1.html
+cp full_higpig_1.html full_ftcover2.html
+cp full_higpig_1.html full_ftcover3.html
+cp full_higpig_1.html full_higpig_2.html
+cp full_higpig_1.html full_little_tree.html
+cp full_higpig_1.html full_mumbo_jumbo.html

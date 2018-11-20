@@ -13,8 +13,8 @@ class NavItem extends Component {
                 { this.props.items.map( (item, index) => {
                     return (
                         <a key={index} id={'subnav' + this.props.index + '-' + index} onClick={() => this.props.selectedHandler(this.props.index, index)}
-                            href={'#page=nav' + this.props.index + '-' + index} className={index === this.props.selected ? 'selected' : ''}>
-                            {item}
+                            href={item.route} className={index === this.props.selected ? 'selected' : ''}>
+                            {item.desc}
                         </a>
                     );
                 }) }
@@ -25,7 +25,7 @@ class NavItem extends Component {
         return (
             <div id={'nav' + this.props.index + '-closed'} className="navClosed">
                 <a id={'nav' + this.props.index + '-0'} onClick={() => this.props.selectedHandler(this.props.index, 0)}
-                    href={'#page=nav' + this.props.index + '-0'}>
+                    href={this.props.items[0].route}>
                     <img src={'images/nav' + this.props.index + '_off.gif'} alt="" width="152" height="26" border="0" />
                 </a>
             </div>

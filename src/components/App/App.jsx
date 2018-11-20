@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import LeftNav from '../LeftNav/LeftNav.jsx';
 import Samples from '../Samples/Samples.jsx';
 import About from '../About/About.jsx';
+import Welcome from '../Welcome/Welcome.jsx';
 
 import './App.css';
 import logo_flyline_1 from '../../images/logo_flyline_1.gif';
@@ -56,6 +57,8 @@ class App extends Component {
         <Switch>
           <Route path="/samples/:item?/:subitem?" component={Samples} />
           <Route path="/about" component={About} />
+          <Route path="/welcome" component={Welcome} />
+          <Route component={Samples} />
         </Switch>
         </div>
       </div>

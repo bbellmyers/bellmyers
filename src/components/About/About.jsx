@@ -22,7 +22,7 @@ class About extends Component {
 
   render() {
     return (
-<div>
+<div id="content">
 <h1><a name="skills" href="#/about/skills"><img src="images/title_skills.gif" alt="Skills" width="71" height="34" border="0"/></a></h1>
 
 <img className="home_portrait" src="images/mouse.jpg" alt="mouse illustrator" width="180" height="211" border="0"/>
@@ -71,7 +71,6 @@ class About extends Component {
 <p>I Prepared camera-ready art for catalogs. My duties included meeting with clients, typesetters and writers daily, as well as producing detailed paste-ups, shooting stats, cutting amber-lith overlays and specifying type.</p>
 
 <h1><a name="education" href="#/about/experience"><img src="images/title_education.gif" alt="Education" width="126" height="34" border="0"/></a></h1>
-
 <h2>Minneapolis College of Art & Design</h2>
 BFA in Visual Communication, Graduated with honors 1989.
 Dean's List 1987 - 1989
@@ -85,6 +84,7 @@ Society of Illustrators Symposium
 <h2>Hagen MicroAge</h2>
 Classes in Quark, Illustrator and Photoshop, Tutorial in Director
 
+<p></p>
 <h1><a name="awards" href="#/about/awards"><img src="images/title_awards.gif" alt="Awards &amp; Honors" width="207" height="34" border="0"/></a></h1>
 <ul>
 	<li>Minnesota Fringe Festival - "Higgledy Piggledy" adapted and performed at Theatre de la Jeune Leune 2007</li>

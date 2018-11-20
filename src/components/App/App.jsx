@@ -7,6 +7,7 @@ import Welcome from '../Welcome/Welcome.jsx';
 import Clients from '../Clients/Clients.jsx';
 import Contact from '../Contact/Contact.jsx';
 import Animation from '../Animation/Animation.jsx';
+import Working from '../Working/Working.jsx';
 
 import './App.css';
 import logo_flyline_1 from '../../images/logo_flyline_1.gif';
@@ -63,6 +64,7 @@ class App extends Component {
           <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
           <Route path="/Contact" component={Contact} />
+          <Route path="/clients/Working" component={Working} />
           <Route path="/clients/:scroll?" component={Clients} />
           <Route component={RouteNotFound} />
         </Switch>

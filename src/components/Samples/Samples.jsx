@@ -8,32 +8,43 @@ class Samples extends Component {
         super();
 
         this.state = {
-            category: 'childcolor'
+            category: 'childcolor',
+            fullsrc: null
         };
     }
 
     render() {
         return (
-            <div>
-               <p>Samples {this.state.category}: {samples_db[this.state.category].length}</p>
+            <div id="content">
+                <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
+                <div id="thumbnailPane">
+                    {samples_db[this.state.category].map((sample, index) => {
+                        return (
+                        <div key={index} className="thumbnail">
+                            <button onClick={() => { return this.loadImage(index); }} >
+                                <img src={sample.thumbnail} alt="copyright Darcy Bell-Myers" border="3"/>
+                            </button>
+                        </div> );
+                    })}
+                </div>
+                <p className="copyright">(These images are copyrighted, and are provided only for viewing on this site.
+                    Please do not reproduce them, or use them for any other purpose.  Thank you.)
+                </p>
 
-            <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
-            <div id="thumbnailPane">
-                {/* <script>
-                    if (category) {
-                        for (var i=0; i<samples[category].length; i++) {
-                            var sample = samples[category][i];
-                            document.write("<div class=\"thumbnail\">");
-                            document.write("<a href=\"#\" onClick=\"return loadImage(" + i + ");\" \>");
-                            document.write("<img src=\"" + sample.thumbnail + "\"" +
-                            "alt=\"copyright Darcy Bell-Myers\" border=\"3\"></a></div>");
-                        }
-                    }
-                </script> */}
-            </div>
-            <p className="copyright">(These images are copyrighted, and are provided only for viewing on this site.
-                Please do not reproduce them, or use them for any other purpose.  Thank you.)
-            </p>
+                <button onClick={()=> this.closeShadow()}>
+                <div id="shadow" style={{ display: 'none'}} onClick={() => this.closeShadow()}>
+                    <table height="100%">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <img border="0" id="zoomZoomImage" src="images/spacer.gif" alt="(c) copyright Darcy Bell-Myers" />
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </button>
+
             </div>
         );
     }
@@ -56,6 +67,19 @@ class Samples extends Component {
         }
     }
 
+    loadImage(index) {
+        let sample;
+        if (!index) {
+            sample = samples_db[this.state.category][0];
+        } else {
+            sample = samples_db[this.state.category][index];
+        }
+
+        this.zoomZoom(sample.full);
+
+        return false;
+    }
+
   // getZoomHref(sample) {
   //   var href = "zoomPane.html?fullSrc=" + sample.full;
   //     if (sample.title) href += "&title=" + sample.title;
@@ -65,32 +89,32 @@ class Samples extends Component {
   //   return encodeURI(href);
   // }
 
-  // zoomZoom(fullSrc) {
-  //   document.getElementById("shadow").style.display = "block";
-  //     var zoom = document.getElementById("zoomZoomImage");
-  //     zoom.addEventListener("load", function() {
-  //         if (zoom.width > window.innerWidth) {
-  //             var reducedWidth = window.innerWidth - 30 + "px";
-  //             zoom.style.width = reducedWidth;
-  //         }
-  //         // still too big
-  //         if (zoom.height > window.innerHeight) {
-  //             zoom.style.width = null;
-  //             var reducedHeight = window.innerHeight - 30 + "px";
-  //             zoom.style.height = reducedHeight;
-  //         }
-  //         zoom.style.visibility = "visible";
-  //     });
-  //     zoom.src = fullSrc;
-  // }
+    zoomZoom(fullSrc) {
+        document.getElementById("shadow").style.display = "block";
+        var zoom = document.getElementById("zoomZoomImage");
+        zoom.addEventListener("load", function() {
+            if (zoom.width > window.innerWidth) {
+                var reducedWidth = window.innerWidth - 30 + "px";
+                zoom.style.width = reducedWidth;
+            }
+            // still too big
+            if (zoom.height > window.innerHeight) {
+                zoom.style.width = null;
+                var reducedHeight = window.innerHeight - 30 + "px";
+                zoom.style.height = reducedHeight;
+            }
+            zoom.style.visibility = "visible";
+      });
+      zoom.src = fullSrc;
+    }
 
-  // closeShadow() {
-  //   document.getElementById("shadow").style.display = "none";
-  //     var zoom = document.getElementById("zoomZoomImage");
-  //   zoom.src = "images/spacer.gif";
-  //     zoom.removeAttribute("style");
-  //     zoom.style.visibility = "hidden";
-  // }
+  closeShadow() {
+    document.getElementById("shadow").style.display = "none";
+    var zoom = document.getElementById("zoomZoomImage");
+    zoom.src = "images/spacer.gif";
+    zoom.removeAttribute("style");
+    zoom.style.visibility = "hidden";
+  }
 
 }
 

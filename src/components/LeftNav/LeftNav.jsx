@@ -22,7 +22,7 @@ class LeftNav extends Component {
 
   render() {
     return (
-      <ul>
+      <ul className="nav">
         {this.subitems.map((items, i) => {
           return (
             <li key={i}>

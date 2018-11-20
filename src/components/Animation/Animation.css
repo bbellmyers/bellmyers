@@ -1,0 +1,10 @@
+.animation video {
+  background-color: black;
+  width: 480px;
+}
+
+@media (max-width: 750px) {
+  .animation video {
+      width: 240px;
+  }
+}

@@ -1,0 +1,10 @@
+/** clients page **/
+@media (min-width: 650px) {
+  .col1 {
+      float: left;
+  }
+
+  .col2 {
+      margin-left: 50%;
+  }
+}

@@ -1,0 +1,94 @@
+#thumbnailPane .thumbnail {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  float: left;
+  margin: 0 16px 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 375px) {
+  #thumbnailPane .thumbnail {
+      margin: 0 8px 8px 0;
+  }
+}
+
+
+#fullsampleframe {
+	text-align: center;
+}
+
+#fullsample {
+	text-align: left;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#fullsample img {
+	float:left;
+	margin: 0 1em 0 0;
+}
+
+#fullsample h1 {
+	font-weight: bold;
+	font-size: 1em;
+	margin: 0;
+	padding: 1em 0 0 0;
+}
+
+#fullsample h2 {
+	font-weight: normal;
+	font-size: 1em;
+	padding: 0;
+	margin: 0 0 1em 0;
+	line-height: normal;
+}
+
+.caption {
+	font-size: 0.8em;
+	margin-top: 0.5em;
+}
+
+.thumbnail {
+	background-color: rgb(220, 217, 239);
+}
+
+.thumbnail td {
+	padding: 6px;
+	padding-bottom: 0;
+}
+
+#zoomText {
+	width: 200px;
+}
+
+#zoomText h2 {
+	line-height: normal;
+}
+
+#shadow {
+	position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../../images/shadow.png);
+	text-align: center;
+	display: none;
+}
+
+#shadow table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/** samples page **/
+.copyright {
+  clear: both;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-bottom: 12px;
+}

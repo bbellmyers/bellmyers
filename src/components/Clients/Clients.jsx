@@ -5,8 +5,59 @@ class Clients extends Component {
 
     render() {
         return (
-            <div>
-               <p>Clients {this.props.match.params.scroll}</p>
+            <div id="content">
+            <img src="images/title_clients.gif" alt="My Clients" width="132" height="34" border="0"/><br/>
+
+            <div className="col1">
+                <span className="subheader">Book and other publishers:</span><br/>
+                Abrams Publishers<br/>
+                Attitude Press<br/>
+                Continental Press<br/>
+                Instructional Fair <br/>
+                In Celebration<br/>
+                The Meadowbrook Press<br/>
+                McGraw Hill<br/>
+                TS Denison<br/>
+                Vowac Publishing<br/>
+                &nbsp;<br/>
+                <span className="subheader">Animation:</span><br/>
+                Mike Jones Film Corp.<br/>
+                Reelworks<br/>
+                &nbsp;<br/>
+                <i>Animation for:</i><br/>
+                Best Buy<br/>
+                Bugles / Nabisco<br/>
+                Car-X<br/>
+                Firestone<br/>
+                Levi's<br/>
+                Mr. Clean<br/>
+                Mug Rootbeer<br/>
+                Old Dutch<br/>
+                &nbsp;
+            </div>
+            <div className="col2">
+                <span className="subheader">Magazines and periodicals:</span><br/>
+                City Business<br/>
+                City Pages<br/>
+                Family Times/Senior Times<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;/Grandparent Times/Baby Times<br/>
+                Minneapolis St Paul Magazine<br/>
+                Minnesota Medicine<br/>
+                Twin Cities Parent<br/>
+                Viking Magazine<br/>
+                &nbsp;<br/>
+                <span className="subheader">Design firms:</span><br/>
+                Nina Jordan Design<br/>
+                Sue Stavig Design<br/>
+                Veronica Romano Design<br/>
+                Vicki Juris Design<br/>
+                &nbsp;<br/>
+                <span className="subheader">Software firms:</span><br/>
+                Blue Willow Interactive<br/>
+                Javelin Technology/<br/>
+                Mastery Point<br/>
+                &nbsp;
+            </div>
             </div>
         );
     }

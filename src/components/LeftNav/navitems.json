@@ -2,30 +2,30 @@
   [
     {
       "desc": "Children's Color",
-      "route": "/samples/0"
+      "route": "/samples/childcolor"
     },
     {
       "desc": "Children's B&W",
-      "route": "/samples/1"
+      "route": "/samples/childbw"
     },
     {
       "desc": "Editorial Color",
-      "route": "/samples/2"
+      "route": "/samples/editcolor"
     },
     {
       "desc": "Editorial B&W",
-      "route": "/samples/3"
+      "route": "/samples/editbw"
     },
     {
       "desc": "Digital",
-      "route": "/samples/4"
+      "route": "/samples/digital"
     },
     {
       "desc": "Design",
-      "route": "/samples/5"
+      "route": "/samples/design"
     },
     { "desc": "Animation",
-      "route": "/samples/6"
+      "route": "/samples/animation"
     }
   ],
   [

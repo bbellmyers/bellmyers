@@ -6,6 +6,7 @@ import About from '../About/About.jsx';
 import Welcome from '../Welcome/Welcome.jsx';
 import Clients from '../Clients/Clients.jsx';
 import Contact from '../Contact/Contact.jsx';
+import Animation from '../Animation/Animation.jsx';
 
 import './App.css';
 import logo_flyline_1 from '../../images/logo_flyline_1.gif';
@@ -31,7 +32,7 @@ class App extends Component {
         <div id="header">
           <iframe title="likebutton" id="fb_frame" src="http://www.facebook.com/plugins/like.php?app_id=104207449680616&amp;href=http%3A%2F%2Fwww.bellmyers.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameBorder="0" style={{border:'none', overflow:'hidden', height:21}} allowtransparency="true"></iframe>
           <div id="logo">
-            <a className="butterfly" target="_top" href="/#/samples/0">
+            <a className="butterfly" target="_top" href="/#/samples/childcolor">
               <img id="butterflyImg" src={logo_butterfly_home} width="124" height="112" alt="butterfly" border="0" />
             </a>
             <div id="logowords">
@@ -57,6 +58,7 @@ class App extends Component {
 
         <div id="contentFrame">
         <Switch>
+          <Route path="/samples/animation" component={Animation} />
           <Route path="/samples/:category?" component={Samples} />
           <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
@@ -81,7 +83,7 @@ class App extends Component {
 
 function RouteNotFound() {
   return (
-    <Redirect push to="/samples/0" />
+    <Redirect push to="/samples/childcolor" />
   );
 }
 

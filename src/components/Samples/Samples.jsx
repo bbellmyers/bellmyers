@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import samples_db from './samples_db.json';
 import './Samples.css';
 
 class Samples extends Component {
+
+    constructor() {
+        super();
+        console.log(samples_db);
+    }
     render() {
         return (
             <div>
-               <p>Samples {this.props.match.params.category}</p>
+               <p>Samples {this.props.match.params.category}: {samples_db[this.props.match.params.category].length}</p>
             </div>
         );
     }

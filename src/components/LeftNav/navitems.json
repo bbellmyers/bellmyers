@@ -2,60 +2,60 @@
   [
     {
       "desc": "Children's Color",
-      "route": "#/samples/0"
+      "route": "/samples/0"
     },
     {
       "desc": "Children's B&W",
-      "route": "#/samples/1"
+      "route": "/samples/1"
     },
     {
       "desc": "Editorial Color",
-      "route": "#/samples/2"
+      "route": "/samples/2"
     },
     {
       "desc": "Editorial B&W",
-      "route": "#/samples/3"
+      "route": "/samples/3"
     },
     {
       "desc": "Digital",
-      "route": "#/samples/4"
+      "route": "/samples/4"
     },
     {
       "desc": "Design",
-      "route": "#/samples/5"
+      "route": "/samples/5"
     },
     { "desc": "Animation",
-      "route": "#/samples/6"
+      "route": "/samples/6"
     }
   ],
   [
     { "desc": "Welcome",
-      "route": "#/welcome"
+      "route": "/welcome"
     },
     { "desc": "Skills",
-      "route": "#/about/skills"
+      "route": "/about/skills"
     },
     { "desc": "Experience",
-      "route": "#/about/experience"
+      "route": "/about/experience"
     },
     { "desc": "Education",
-      "route": "#/about/education"
+      "route": "/about/education"
     },
     { "desc": "Awards",
-      "route": "#/about/awards"
+      "route": "/about/awards"
     }
   ],
   [
     {"desc": "My Clients",
-      "route": "#/clients/list"
+      "route": "/clients/list"
     },
     { "desc": "Working with Me",
-      "route": "#/clients/working"
+      "route": "/clients/working"
     }
   ],
   [
     {"desc": "Contact Form",
-      "route": "#/contact"
+      "route": "/contact"
     }
   ]
 ]

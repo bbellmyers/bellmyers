@@ -20,28 +20,6 @@ class LeftNav extends Component {
     };
   }
 
-  componentDidMount() {
-    let foundSub = -1;
-    let foundItem = -1;
-    subitems.some((item, index) => {
-      foundSub = item.findIndex((subitem) => {
-        return subitem.route.indexOf(this.props.history.location.pathname) >= 0;
-      });
-      if (foundSub >= 0) {
-        foundItem = index;
-        return true;
-      }
-      return false;
-    });
-    if (foundSub >= 0) {
-      this.setState({
-        selectedItem: foundItem,
-        selectedSubitem: foundSub
-      });
-    }
-    return true;
-  }
-
   render() {
     return (
       <ul>
@@ -61,10 +39,26 @@ class LeftNav extends Component {
   }
 
   componentWillReceiveProps(props) {
-    if (props.match) {
-      console.log(props.match);
-    }
-  }
+    console.log(props);
+        let foundSub = -1;
+        let foundItem = -1;
+        subitems.some((item, index) => {
+          foundSub = item.findIndex((subitem) => {
+            return subitem.route === props.history.location.pathname;
+          });
+          if (foundSub >= 0) {
+            foundItem = index;
+            return true;
+          }
+          return false;
+        });
+        if (foundSub >= 0) {
+          this.setState({
+            selectedItem: foundItem,
+            selectedSubitem: foundSub
+          });
+        }
+      }
 }
 
 export default LeftNav;

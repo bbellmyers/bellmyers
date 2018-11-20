@@ -5,7 +5,7 @@ class Samples extends Component {
     render() {
         return (
             <div>
-               <p>Samples {this.props.match.params.item} / {this.props.match.params.subitem}</p>
+               <p>Samples {this.props.match.params.category}</p>
             </div>
         );
     }

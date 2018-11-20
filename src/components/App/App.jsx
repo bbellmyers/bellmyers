@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import LeftNav from '../LeftNav/LeftNav.jsx';
 import Samples from '../Samples/Samples.jsx';
 import About from '../About/About.jsx';
@@ -31,7 +31,7 @@ class App extends Component {
         <div id="header">
           <iframe title="likebutton" id="fb_frame" src="http://www.facebook.com/plugins/like.php?app_id=104207449680616&amp;href=http%3A%2F%2Fwww.bellmyers.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameBorder="0" style={{border:'none', overflow:'hidden', height:21}} allowtransparency="true"></iframe>
           <div id="logo">
-            <a className="butterfly" target="_top" href="#page=nav0-0">
+            <a className="butterfly" target="_top" href="/#/samples/0">
               <img id="butterflyImg" src={logo_butterfly_home} width="124" height="112" alt="butterfly" border="0" />
             </a>
             <div id="logowords">
@@ -57,12 +57,12 @@ class App extends Component {
 
         <div id="contentFrame">
         <Switch>
-          <Route path="/samples/:item?/:subitem?" component={Samples} />
+          <Route path="/samples/:category?" component={Samples} />
           <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
           <Route path="/Contact" component={Contact} />
           <Route path="/clients/:scroll?" component={Clients} />
-          <Route component={Samples} />
+          <Route component={RouteNotFound} />
         </Switch>
         </div>
       </div>
@@ -77,6 +77,12 @@ class App extends Component {
   showNavMenu(what) {
     console.log("show nav menu");
   }
+}
+
+function RouteNotFound() {
+  return (
+    <Redirect push to="/samples/0" />
+  );
 }
 
 export default App;

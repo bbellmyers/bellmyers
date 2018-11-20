@@ -6,14 +6,54 @@ class Samples extends Component {
 
     constructor() {
         super();
-        console.log(samples_db);
+
+        this.state = {
+            category: 'childcolor'
+        };
     }
+
     render() {
         return (
             <div>
-               <p>Samples {this.props.match.params.category}: {samples_db[this.props.match.params.category].length}</p>
+               <p>Samples {this.state.category}: {samples_db[this.state.category].length}</p>
+
+            <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
+            <div id="thumbnailPane">
+                {/* <script>
+                    if (category) {
+                        for (var i=0; i<samples[category].length; i++) {
+                            var sample = samples[category][i];
+                            document.write("<div class=\"thumbnail\">");
+                            document.write("<a href=\"#\" onClick=\"return loadImage(" + i + ");\" \>");
+                            document.write("<img src=\"" + sample.thumbnail + "\"" +
+                            "alt=\"copyright Darcy Bell-Myers\" border=\"3\"></a></div>");
+                        }
+                    }
+                </script> */}
+            </div>
+            <p className="copyright">(These images are copyrighted, and are provided only for viewing on this site.
+                Please do not reproduce them, or use them for any other purpose.  Thank you.)
+            </p>
             </div>
         );
+    }
+
+    componentDidMount() {
+        this.updateCategory(this.props);
+    }
+
+    componentWillReceiveProps(props) {
+        this.updateCategory(props);
+    }
+
+    updateCategory(props) {
+        if (props.match.params && props.match.params.category) {
+            if (samples_db.hasOwnProperty(props.match.params.category)) {
+                this.setState({
+                    category: props.match.params.category
+                });
+            }
+        }
     }
 
   // getZoomHref(sample) {

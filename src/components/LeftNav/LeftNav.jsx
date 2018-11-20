@@ -38,7 +38,15 @@ class LeftNav extends Component {
     );
   }
 
+  componentDidMount() {
+    this.findSub(this.props);
+  }
+
   componentWillReceiveProps(props) {
+    this.findSub(props);
+  }
+
+  findSub(props) {
     let foundSub = -1;
     let foundItem = -1;
     subitems.some((item, index) => {

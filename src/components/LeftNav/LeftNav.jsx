@@ -38,6 +38,12 @@ class LeftNav extends Component {
     );
   }
 
+  componentWillReceiveProps(props) {
+    if (props.match) {
+      console.log(props.match);
+    }
+  }
+
   // syncNavContent() {
   //   var args = getArgs();
   //   var page = "home";

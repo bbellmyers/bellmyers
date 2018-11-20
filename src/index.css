@@ -22,7 +22,9 @@ button:active{
     background: transparent;
     outline: none;
     padding: 0;
-}
+		font-size: 14px;
+		text-decoration: underline;
+	}
 
 body, td{
 	font-size: 14px;
@@ -30,15 +32,17 @@ body, td{
 	font-family: Times, Timew New Roman, New York, serif;
 }
 
-a:link {
-	COLOR: #672D91; FONT-FAMILY: Times, Times New Roman, New York, serif;
+a:link, button {
+	color: #672D91;
+	font-family: Times, Times New Roman, New York, serif;
+	cursor: pointer;
 }
 
-a:hover {
+a:hover, button:hover {
 	COLOR: #DD3C20;
 }
 
-a:visited {
+a:visited, button:visited {
 	COLOR: #672D91;
 }
 

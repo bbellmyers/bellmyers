@@ -4,6 +4,8 @@ import LeftNav from '../LeftNav/LeftNav.jsx';
 import Samples from '../Samples/Samples.jsx';
 import About from '../About/About.jsx';
 import Welcome from '../Welcome/Welcome.jsx';
+import Clients from '../Clients/Clients.jsx';
+import Contact from '../Contact/Contact.jsx';
 
 import './App.css';
 import logo_flyline_1 from '../../images/logo_flyline_1.gif';
@@ -56,8 +58,10 @@ class App extends Component {
         <div id="contentFrame">
         <Switch>
           <Route path="/samples/:item?/:subitem?" component={Samples} />
-          <Route path="/about" component={About} />
+          <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
+          <Route path="/Contact" component={Contact} />
+          <Route path="/clients/:scroll?" component={Clients} />
           <Route component={Samples} />
         </Switch>
         </div>

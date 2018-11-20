@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import './Samples.css';
 
 class Samples extends Component {
-
-    constructor() {
-        super();
-    }
-
     render() {
         return (
             <div>

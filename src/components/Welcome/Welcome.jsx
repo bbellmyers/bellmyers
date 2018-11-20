@@ -3,8 +3,13 @@ import './Welcome.css';
 
 class Welcome extends Component {
 
-    render() {
-        return (
+  constructor() {
+    super();
+    this.email = window.decrypt_string(0,0,0,true);
+  }
+
+  render() {
+    return (
 
 <div id="content">
 	<img src="images/title_welcome.gif" alt="Welcome to my website!" width="291" height="34" border="0" /><br/>
@@ -19,12 +24,9 @@ class Welcome extends Component {
 	of my work</a>.  Through the years, I've done children's storybooks, both in color and black &amp;
 	white, editorial work for magazines, books and newspapers, and lots of other fun projects.</p>
 	<p>
-	You can review my
-	<a href="index.html?page=nav2-2" target="_top">resume</a>
-	and <a href="index.html?page=nav3-1" target="_top">client list</a>,
+	You can review my	<a href="index.html?page=nav2-2" target="_top">resume</a>	and <a href="index.html?page=nav3-1" target="_top">client list</a>,
 	or get on my <a href="index.html?page=nav4-1" target="_top">mailing list</a>.
-	For other questions or sample requests, e-mail me at
-	<a href="javascript:decrypt_and_email(0)"><script>decrypt_and_echo(0)</script></a>.</p>
+	For other questions or sample requests, e-mail me at <button onClick={() => this.decryptEmail()}>{this.email}</button>.</p>
 	<p>
 	I hope you like this site, it's for you after all. Make yourself at home!</p>
 
@@ -43,8 +45,13 @@ class Welcome extends Component {
 	<p><a href="#/about" target="_top">Click here to learn more...</a></p>
 
   </div>
-        );
-    }
+    );
+  }
+
+  decryptEmail() {
+    window.decrypt_and_email(0);
+  }
+
 }
 
 export default Welcome;

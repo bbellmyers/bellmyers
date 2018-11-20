@@ -39,7 +39,7 @@
       "route": "#/about/experience"
     },
     { "desc": "Education",
-      "route": "#/about/eductions"
+      "route": "#/about/education"
     },
     { "desc": "Awards",
       "route": "#/about/awards"

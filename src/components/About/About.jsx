@@ -3,8 +3,25 @@ import './About.css';
 
 class About extends Component {
 
-    render() {
-        return (
+	componentDidMount() {
+		if (this.props.match.params.scroll) {
+			this.scrollToAnchor(this.props.match.params.scroll);
+		}
+	}
+
+	componentDidUpdate() {
+		if (this.props.match.params.scroll) {
+			this.scrollToAnchor(this.props.match.params.scroll);
+		}
+	}
+
+	scrollToAnchor(anchor) {
+	  let selector = '[name="' + anchor + '"]';
+	  setTimeout(() => 	document.querySelector(selector).scrollIntoView(), 0);
+	}
+
+  render() {
+    return (
 <div>
 <h1><a name="skills" href="#/about/skills"><img src="images/title_skills.gif" alt="Skills" width="71" height="34" border="0"/></a></h1>
 

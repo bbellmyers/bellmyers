@@ -30,7 +30,7 @@
   ],
   [
     { "desc": "Welcome",
-      "route": "#/Welcome"
+      "route": "#/welcome"
     },
     { "desc": "Skills",
       "route": "#/about/skills"

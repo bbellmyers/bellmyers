@@ -52,7 +52,7 @@ class App extends Component {
         <div id="leftnav">
           <button type="button" className="menubutton" onClick={() => this.showNavMenu(false)}></button>
           <img className="butterfly" src={logo_butterfly_nav} width="166" height="117" alt="butterfly" border="0" />
-          <LeftNav></LeftNav>
+          <Route component={LeftNav} />
         </div>
 
         <div id="contentFrame">

@@ -60,7 +60,7 @@ class Samples extends Component {
             sample = samples_db[this.state.category][index];
         }
 
-        this.props.zoomHandler(sample.full);
+        this.props.zoomHandler(sample);
 
         return false;
     }

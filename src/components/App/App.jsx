@@ -29,7 +29,7 @@ class App extends Component {
     this.state = {
       menuButtonVisible: true,
       navClosed: true,
-      zoomSrc: null
+      zoomSample: {}
     };
   }
 
@@ -67,7 +67,7 @@ class App extends Component {
         <div id="contentFrame">
         <Switch>
           <Route path="/samples/animation" component={Animation} />
-          <Route path="/samples/:category?" render={(props) => <Samples {...props} zoomHandler={(fullSrc) => this.handleZoom(fullSrc)} />} />
+          <Route path="/samples/:category?" render={(props) => <Samples {...props} zoomHandler={(sample) => this.handleZoom(sample)} />} />
           <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
           <Route path="/contact" component={Contact} />
@@ -78,7 +78,7 @@ class App extends Component {
         </Switch>
         </div>
 
-        <Zoom fullSrc={this.state.zoomSrc}/>
+        <Zoom sample={this.state.zoomSample}/>
 
         <div id="navmask" style={{ display: this.state.navClosed ? "none" : "block"}} onClick={() =>  this.showNavMenu(false)}></div>
 
@@ -107,9 +107,9 @@ class App extends Component {
     });
   }
 
-  handleZoom(fullSrc) {
+  handleZoom(sample) {
     this.setState({
-      zoomSrc: fullSrc
+      zoomSample: sample
     });
   }
 

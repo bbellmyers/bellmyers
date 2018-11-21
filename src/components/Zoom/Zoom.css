@@ -1,4 +1,4 @@
-#shadow {
+button#shadow {
 	position: fixed;
   z-index: 100;
   top: 0;
@@ -8,6 +8,12 @@
 	background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   display: block;
+  text-decoration: none;
+}
+
+button#shadow:visited,
+button#shadow {
+  color: black;
 }
 
 #shadow.closed {
@@ -16,5 +22,7 @@
 
 #shadow table {
 	margin-left: auto;
-	margin-right: auto;
+  margin-right: auto;
+  background: white;
+  border-spacing: 6px;
 }

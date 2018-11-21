@@ -14,12 +14,16 @@ class Zoom extends Component {
   render() {
     return (
 			<button id="shadow" className={this.state.zoomed? "" : "closed"} onClick={() => this.closeShadow()}>
-				<table height="100%">
+				<table>
 						<tbody>
 						<tr>
 								<td>
 									<img border="0" id="zoomZoomImage" src={this.state.zoomSrc} alt="(c) copyright Darcy Bell-Myers" />
 								</td>
+						</tr>
+						<tr className="caption">
+							<h2>{this.props.sample.title}</h2>
+							{this.props.sample.subtitle}
 						</tr>
 						</tbody>
 				</table>
@@ -34,9 +38,9 @@ class Zoom extends Component {
 	}
 
 	componentWillReceiveProps(props) {
-		if (props.fullSrc) {
+		if (props.sample.full) {
 			this.setState({
-				zoomSrc: props.fullSrc ? props.fullSrc : 'images/spacer.gif'
+				zoomSrc: props.sample.full ? props.sample.full : 'images/spacer.gif'
 			});
 			var zoom = document.getElementById("zoomZoomImage");
 			zoom.style.width = null;

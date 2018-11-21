@@ -171,6 +171,7 @@
   #leftnav.hide {
     left: 100vw;
     transition: left 0.2s;
+    transition-delay: 0.5s;
   }
 }
 
@@ -225,21 +226,4 @@
   iframe#fb_frame {
     margin-top: 74px;
   }
-}
-
-#shadow {
-	position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
-	text-align: center;
-	display: none;
-}
-
-#shadow table {
-	margin-left: auto;
-	margin-right: auto;
 }

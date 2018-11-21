@@ -8,6 +8,7 @@ import Clients from '../Clients/Clients.jsx';
 import Contact from '../Contact/Contact.jsx';
 import Animation from '../Animation/Animation.jsx';
 import Working from '../Working/Working.jsx';
+import Zoom from '../Zoom/Zoom.jsx';
 
 import './App.css';
 import logo_flyline_1 from '../../images/logo_flyline_1.gif';
@@ -27,7 +28,8 @@ class App extends Component {
     this.maskEl = null;
     this.state = {
       menuButtonVisible: true,
-      navClosed: true
+      navClosed: true,
+      zoomSrc: null
     };
   }
 
@@ -49,7 +51,7 @@ class App extends Component {
                 <img src={logo_flyline_1} width="34" height="51" alt="" />
                 <img src={logo_flyline_2} width="248" height="29" alt="" />
               </div>
-              <button className="headerlink" onClick={() => this.decryptEmail()}>{this.email}</button>
+              <button className="headerlink" onClick={() => window.decrypt_and_email(0)}>{this.email}</button>
             </div>
             <div id="banner">&nbsp;</div>
             <button type="button" className="menubutton" onClick={() => this.showNavMenu(true)}></button>
@@ -65,7 +67,7 @@ class App extends Component {
         <div id="contentFrame">
         <Switch>
           <Route path="/samples/animation" component={Animation} />
-          <Route path="/samples/:category?" component={Samples} />
+          <Route path="/samples/:category?" render={(props) => <Samples {...props} zoomHandler={(fullSrc) => this.handleZoom(fullSrc)} />} />
           <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
           <Route path="/contact" component={Contact} />
@@ -76,17 +78,9 @@ class App extends Component {
         </Switch>
         </div>
 
-        <button id="shadow" onClick={()=> this.closeShadow()} style={{ display: 'none' }}>
-          <table height="100%">
-              <tbody>
-              <tr>
-                  <td>
-                    <img border="0" id="zoomZoomImage" src="images/spacer.gif" alt="(c) copyright Darcy Bell-Myers" />
-                  </td>
-              </tr>
-              </tbody>
-          </table>
-        </button>
+        <Zoom fullSrc={this.state.zoomSrc}/>
+
+        <div id="navmask" style={{ display: this.state.navClosed ? "none" : "block"}} onClick={() =>  this.showNavMenu(false)}></div>
 
       </div>
       </Router>
@@ -101,10 +95,6 @@ class App extends Component {
     }
   }
 
-  decryptEmail() {
-    window.decrypt_and_email(0);
-  }
-
   _navHandler() {
     if (this.state.navClosed === false && this.state.menuButtonVisible) {
       this.showNavMenu(false);
@@ -112,35 +102,17 @@ class App extends Component {
   }
 
   showNavMenu(show) {
-    let maskEl;
-    if (show) {
-      this.setState({
-        navClosed: false
-      });
-      maskEl = document.createElement("div");
-      maskEl.id = "navmask";
-      maskEl.onclick = () => {
-          return this.showNavMenu(false);
-      };
-      document.body.appendChild(maskEl);
-    } else {
-      this.setState({
-        navClosed: true
-      });
-      maskEl = document.getElementById("navmask");
-      if (maskEl) {
-          document.body.removeChild(maskEl);
-      }
-    }
+    this.setState({
+      navClosed: !show
+    });
   }
 
-  closeShadow() {
-    document.getElementById("shadow").style.display = "none";
-    var zoom = document.getElementById("zoomZoomImage");
-    zoom.src = "images/spacer.gif";
-    zoom.removeAttribute("style");
-    zoom.style.visibility = "hidden";
+  handleZoom(fullSrc) {
+    this.setState({
+      zoomSrc: fullSrc
+    });
   }
+
 }
 
 function RouteNotFound() {

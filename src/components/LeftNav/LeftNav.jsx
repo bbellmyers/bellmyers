@@ -63,6 +63,8 @@ class LeftNav extends Component {
       }
       return false;
     });
+    // set state if loading from bookmark or home button, otherwise
+    // _selectedHandler already did it.
     if (foundSub >= 0 && this.state.selectedSubitem !== foundSub) {
       this.setState({
         selectedItem: foundItem,

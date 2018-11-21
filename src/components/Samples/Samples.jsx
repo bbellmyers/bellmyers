@@ -60,28 +60,9 @@ class Samples extends Component {
             sample = samples_db[this.state.category][index];
         }
 
-        this.zoomZoom(sample.full);
+        this.props.zoomHandler(sample.full);
 
         return false;
-    }
-
-    zoomZoom(fullSrc) {
-        document.getElementById("shadow").style.display = "block";
-        var zoom = document.getElementById("zoomZoomImage");
-        zoom.addEventListener("load", function() {
-            if (zoom.width > window.innerWidth) {
-                var reducedWidth = window.innerWidth - 30 + "px";
-                zoom.style.width = reducedWidth;
-            }
-            // still too big
-            if (zoom.height > window.innerHeight) {
-                zoom.style.width = null;
-                var reducedHeight = window.innerHeight - 30 + "px";
-                zoom.style.height = reducedHeight;
-            }
-            zoom.style.visibility = "visible";
-      });
-      zoom.src = fullSrc;
     }
 }
 

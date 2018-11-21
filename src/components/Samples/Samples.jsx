@@ -30,21 +30,6 @@ class Samples extends Component {
                 <p className="copyright">(These images are copyrighted, and are provided only for viewing on this site.
                     Please do not reproduce them, or use them for any other purpose.  Thank you.)
                 </p>
-
-                <button onClick={()=> this.closeShadow()}>
-                <div id="shadow" style={{ display: 'none'}} onClick={() => this.closeShadow()}>
-                    <table height="100%">
-                        <tbody>
-                        <tr>
-                            <td>
-                                <img border="0" id="zoomZoomImage" src="images/spacer.gif" alt="(c) copyright Darcy Bell-Myers" />
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                </button>
-
             </div>
         );
     }
@@ -80,15 +65,6 @@ class Samples extends Component {
         return false;
     }
 
-  // getZoomHref(sample) {
-  //   var href = "zoomPane.html?fullSrc=" + sample.full;
-  //     if (sample.title) href += "&title=" + sample.title;
-  //     if (sample.subtitle) href += "&subtitle=" + sample.subtitle;
-  //     if (sample.comments) href += "&comments=" + sample.comments;
-
-  //   return encodeURI(href);
-  // }
-
     zoomZoom(fullSrc) {
         document.getElementById("shadow").style.display = "block";
         var zoom = document.getElementById("zoomZoomImage");
@@ -107,15 +83,6 @@ class Samples extends Component {
       });
       zoom.src = fullSrc;
     }
-
-  closeShadow() {
-    document.getElementById("shadow").style.display = "none";
-    var zoom = document.getElementById("zoomZoomImage");
-    zoom.src = "images/spacer.gif";
-    zoom.removeAttribute("style");
-    zoom.style.visibility = "hidden";
-  }
-
 }
 
 export default Samples;

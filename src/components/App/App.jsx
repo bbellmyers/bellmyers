@@ -24,6 +24,11 @@ class App extends Component {
     super();
     window.addresses = addresses;
     this.email = window.decrypt_string(0,0,0,true);
+    this.maskEl = null;
+    this.state = {
+      menuButtonVisible: true,
+      navClosed: true
+    };
   }
 
   render() {
@@ -51,10 +56,10 @@ class App extends Component {
           </div>
         </div>
 
-        <div id="leftnav">
+        <div id="leftnav" className={this.state.menuButtonVisible && this.state.navClosed ? "hide" : ""}>
           <button type="button" className="menubutton" onClick={() => this.showNavMenu(false)}></button>
           <img className="butterfly" src={logo_butterfly_nav} width="166" height="117" alt="butterfly" border="0" />
-          <Route component={LeftNav} />
+          <Route render={(props) => <LeftNav {...props} onNav={() => this._navHandler()} />} />
         </div>
 
         <div id="contentFrame">
@@ -63,23 +68,80 @@ class App extends Component {
           <Route path="/samples/:category?" component={Samples} />
           <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
-          <Route path="/Contact" component={Contact} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/contact/success" component={Contact} />
           <Route path="/clients/Working" component={Working} />
           <Route path="/clients/:scroll?" component={Clients} />
           <Route component={RouteNotFound} />
         </Switch>
         </div>
+
+        <button onClick={()=> this.closeShadow()}>
+          <div id="shadow" style={{ display: 'none'}}>
+              <table height="100%">
+                  <tbody>
+                  <tr>
+                      <td>
+                        <img border="0" id="zoomZoomImage" src="images/spacer.gif" alt="(c) copyright Darcy Bell-Myers" />
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+        </button>
+
       </div>
       </Router>
     );
+  }
+
+  componentDidMount() {
+    if (window.getComputedStyle(document.getElementsByClassName('menubutton')[0]).display === "none") {
+      this.setState({
+        menuButtonVisible: false
+      });
+    }
   }
 
   decryptEmail() {
     window.decrypt_and_email(0);
   }
 
-  showNavMenu(what) {
-    console.log("show nav menu");
+  _navHandler() {
+    if (this.state.navClosed === false && this.state.menuButtonVisible) {
+      this.showNavMenu(false);
+    }
+  }
+
+  showNavMenu(show) {
+    let maskEl;
+    if (show) {
+      this.setState({
+        navClosed: false
+      });
+      maskEl = document.createElement("div");
+      maskEl.id = "navmask";
+      maskEl.onclick = () => {
+          return this.showNavMenu(false);
+      };
+      document.body.appendChild(maskEl);
+    } else {
+      this.setState({
+        navClosed: true
+      });
+      maskEl = document.getElementById("navmask");
+      if (maskEl) {
+          document.body.removeChild(maskEl);
+      }
+    }
+  }
+
+  closeShadow() {
+    document.getElementById("shadow").style.display = "none";
+    var zoom = document.getElementById("zoomZoomImage");
+    zoom.src = "images/spacer.gif";
+    zoom.removeAttribute("style");
+    zoom.style.visibility = "hidden";
   }
 }
 

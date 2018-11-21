@@ -26,7 +26,7 @@
 
 @media(max-width: 499px) {
   #logowords {
-    padding: 12px 0 0 24px;
+    padding: 9px 0 0 24px;
     margin-left: 0;
   }
 }
@@ -144,12 +144,11 @@
 }
 
 #leftnav {
-  display: none;
+  width: 0;
 }
 
 @media(min-width: 500px) {
   #leftnav {
-    display: inherit;
     width: 166px;
     float: left;
   }
@@ -157,16 +156,21 @@
 
 @media(max-width: 499px) {
   #leftnav {
-    display: none;
     position: fixed;
     top: 0;
-    right: 0;
+    left: calc(100vw - 166px);
     height: 100vh;
     width: 166px;
     background-image: url(../../images/back_leftbar.gif);
     background-repeat: repeat-y;
     background-color: white;
     z-index: 10;
+    transition: left 0.2s;
+  }
+
+  #leftnav.hide {
+    left: 100vw;
+    transition: left 0.2s;
   }
 }
 
@@ -221,4 +225,21 @@
   iframe#fb_frame {
     margin-top: 74px;
   }
+}
+
+#shadow {
+	position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	display: none;
+}
+
+#shadow table {
+	margin-left: auto;
+	margin-right: auto;
 }

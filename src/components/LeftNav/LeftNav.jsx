@@ -31,6 +31,7 @@ class LeftNav extends Component {
                 selected={this.state.selectedSubitem}
                 selectedHandler={(index, subindex) => {
                   this.setState({ selectedItem: index, selectedSubitem: subindex});
+                  this.props.onNav();
                 }}/></li>
           );
         })}
@@ -50,6 +51,7 @@ class LeftNav extends Component {
     let foundSub = -1;
     let foundItem = -1;
     subitems.some((item, index) => {
+      // findIndex requires polyfill in IE
       foundSub = item.findIndex((subitem) => {
         return subitem.route === props.history.location.pathname;
       });
@@ -59,7 +61,7 @@ class LeftNav extends Component {
       }
       return false;
     });
-    if (foundSub >= 0) {
+    if (foundSub >= 0 && this.state.selectedSubitem !== foundSub) {
       this.setState({
         selectedItem: foundItem,
         selectedSubitem: foundSub

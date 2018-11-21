@@ -68,24 +68,6 @@
 	line-height: normal;
 }
 
-#shadow {
-	position: fixed;
-  z-index: 11;
-  top: 0;
-  left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-image: url(../../images/shadow.png);
-	text-align: center;
-	display: none;
-}
-
-#shadow table {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/** samples page **/
 .copyright {
   clear: both;
   font-size: 0.8em;

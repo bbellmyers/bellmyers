@@ -76,18 +76,16 @@ class App extends Component {
         </Switch>
         </div>
 
-        <button onClick={()=> this.closeShadow()}>
-          <div id="shadow" style={{ display: 'none'}}>
-              <table height="100%">
-                  <tbody>
-                  <tr>
-                      <td>
-                        <img border="0" id="zoomZoomImage" src="images/spacer.gif" alt="(c) copyright Darcy Bell-Myers" />
-                      </td>
-                  </tr>
-                  </tbody>
-              </table>
-          </div>
+        <button id="shadow" onClick={()=> this.closeShadow()} style={{ display: 'none' }}>
+          <table height="100%">
+              <tbody>
+              <tr>
+                  <td>
+                    <img border="0" id="zoomZoomImage" src="images/spacer.gif" alt="(c) copyright Darcy Bell-Myers" />
+                  </td>
+              </tr>
+              </tbody>
+          </table>
         </button>
 
       </div>

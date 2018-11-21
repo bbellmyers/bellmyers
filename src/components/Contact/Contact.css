@@ -3,6 +3,7 @@
   color: #DD3C20;
 }
 
-input {
+input, textarea {
   margin: 2px;
+  border: 1px solid #cccccc;
 }

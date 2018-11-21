@@ -29,10 +29,7 @@ class LeftNav extends Component {
               <NavItem items={items}
                 open={i === this.state.selectedItem ? true : false} index={i}
                 selected={this.state.selectedSubitem}
-                selectedHandler={(index, subindex) => {
-                  this.setState({ selectedItem: index, selectedSubitem: subindex});
-                  this.props.onNav();
-                }}/></li>
+                selectedHandler={(index, subindex) => this._selectedHandler(index, subindex)}/></li>
           );
         })}
       </ul>
@@ -45,6 +42,11 @@ class LeftNav extends Component {
 
   componentWillReceiveProps(props) {
     this.findSub(props);
+  }
+
+  _selectedHandler(index, subindex) {
+    this.setState({ selectedItem: index, selectedSubitem: subindex});
+    this.props.onNav();
   }
 
   findSub(props) {

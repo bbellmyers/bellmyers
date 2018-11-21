@@ -20,12 +20,12 @@ class Welcome extends Component {
 	illustrator to create beautiful custom illustration and design, you've
 	come to the right place. </p>
 	<p>
-	This site will show you some <a href="index.html?page=nav1-1" target="_top">examples
+	This site will show you some <a href="#/samples">examples
 	of my work</a>.  Through the years, I've done children's storybooks, both in color and black &amp;
 	white, editorial work for magazines, books and newspapers, and lots of other fun projects.</p>
 	<p>
-	You can review my	<a href="index.html?page=nav2-2" target="_top">resume</a>	and <a href="index.html?page=nav3-1" target="_top">client list</a>,
-	or get on my <a href="index.html?page=nav4-1" target="_top">mailing list</a>.
+	You can review my	<a href="#/about/skills">resume</a>	and <a href="#/clients/list">client list</a>,
+	or get on my <a href="#/contact">mailing list</a>.
 	For other questions or sample requests, e-mail me at <button onClick={() => this.decryptEmail()}>{this.email}</button>.</p>
 	<p>
 	I hope you like this site, it's for you after all. Make yourself at home!</p>
@@ -42,7 +42,7 @@ class Welcome extends Component {
 	false to me, to be clich&eacute;d or too cutesy, my audience of children will be the
 	first to discern this and unlike most adults will be sure to let me know!</p>
 
-	<p><a href="#/about" target="_top">Click here to learn more...</a></p>
+	<p><a href="#/clients/working" target="_top">Click here to learn more...</a></p>
 
   </div>
     );

@@ -111,7 +111,7 @@ class Contact extends Component {
                     </tbody>
                 </table>
                 </form>
-                <p>&nbsp;</p>
+                <p>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>
             </div>
             );
         }

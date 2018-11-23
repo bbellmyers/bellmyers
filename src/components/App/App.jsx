@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import '@babel/polyfill';
+
 import LeftNav from '../LeftNav/LeftNav.jsx';
 import Samples from '../Samples/Samples.jsx';
 import About from '../About/About.jsx';

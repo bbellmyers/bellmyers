@@ -43,7 +43,7 @@ class Samples extends Component {
   }
 
   updateCategory(props) {
-    if (props.match.params && props.match.params.category) {
+    if (props.match && props.match.params && props.match.params.category) {
       if (samples_db.hasOwnProperty(props.match.params.category)) {
         this.setState({
           category: props.match.params.category

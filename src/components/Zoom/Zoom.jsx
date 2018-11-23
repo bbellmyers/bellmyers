@@ -18,15 +18,8 @@ class Zoom extends Component {
   render() {
     return (
       <button id="shadow" className={this.state.zoomed? "" : "closed"} onClick={() => this.closeShadow()}>
-        <table className="zoomPanel" style={{width: this.state.zoomWidth, height: this.state.zoomHeight}}>
-            <tbody>
-            <tr>
-                <td>
-                  <img border="0" id="zoomZoomImage" src={this.state.zoomSrc} alt="(c) copyright Darcy Bell-Myers" />
-                </td>
-            </tr>
-            </tbody>
-        </table>
+          <img border="0" id="zoomZoomImage" src={this.state.zoomSrc}
+          alt="(c) copyright Darcy Bell-Myers" style={{width: this.state.zoomWidth, height: this.state.zoomHeight}}/>
       </button>
     );
   }
@@ -34,17 +27,21 @@ class Zoom extends Component {
   closeShadow() {
     this.setState({
       zoomed: false,
-      zoomSrc: SPACER
+      zoomSrc: SPACER,
+      zoomWidth: window.innerWidth,
+      zoomHeight: window.innerHeight
     });
   }
 
   componentWillReceiveProps(props) {
     if (props.sample.full) {
       this.setState({
+        zoomed: false,
         zoomSrc: props.sample.full ? props.sample.full : SPACER
       });
       var zoom = document.getElementById("zoomZoomImage");
       zoom.addEventListener("load", () => {
+
         if (zoom.src.indexOf(SPACER) < 0) {
           let ratio = zoom.width / zoom.height;
 

@@ -1,11 +1,11 @@
 button#shadow {
-	position: fixed;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   display: block;
   text-decoration: none;
@@ -21,8 +21,13 @@ button#shadow {
 }
 
 #shadow table {
-	margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
   background: white;
   border-spacing: 6px;
+}
+
+#shadow table img {
+  width: 100%;
+  object-fit: contain;
 }

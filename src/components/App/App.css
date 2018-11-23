@@ -171,7 +171,6 @@
   #leftnav.hide {
     left: 100vw;
     transition: left 0.2s;
-    transition-delay: 0.5s;
   }
 }
 

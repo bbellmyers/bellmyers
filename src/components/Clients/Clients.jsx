@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollToTopOnMount from '../App/ScollToTopOnMount.jsx';
 import './Clients.css';
 
 class Clients extends Component {
@@ -6,8 +7,8 @@ class Clients extends Component {
     render() {
         return (
             <div id="content">
-            <img src="images/title_clients.gif" alt="My Clients" width="132" height="34" border="0"/><br/>
-
+            <ScrollToTopOnMount/>
+            <img top="top" src="images/title_clients.gif" alt="My Clients" width="132" height="34" border="0"/><br/>
             <div className="col1">
                 <span className="subheader">Book and other publishers:</span><br/>
                 Abrams Publishers<br/>

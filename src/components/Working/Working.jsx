@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollToTopOnMount from '../App/ScollToTopOnMount.jsx';
 import './Working.css';
 
 class Working extends Component {
@@ -6,8 +7,8 @@ class Working extends Component {
   render() {
     return (
 <div id="content">
-
-<img src="images/title_working.gif" alt="Skills" width="212" height="34" border="0"/>
+<ScrollToTopOnMount/>
+<img top="top" src="images/title_working.gif" alt="Skills" width="212" height="34" border="0"/>
 	<p>
 	Over the years I've worked on a variety of projects in a variety of mediums,
 	though have come to specialize in making art for children. This does not mean
@@ -19,7 +20,7 @@ class Working extends Component {
 	false to me, to be clich&eacute;d or too cutesy, my audience of children will be the
 	first to discern this and unlike most adults will be sure to let me know!</p>
 
-	<span class="subheader">Before we begin</span> a project I will need to know a few things:
+	<span className="subheader">Before we begin</span> a project I will need to know a few things:
 	<ul>
 	<li>number of images (if more than one)</li>
 	<li>approximate  dimensions of the finished work</li>

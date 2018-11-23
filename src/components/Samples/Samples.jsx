@@ -15,7 +15,7 @@ class Samples extends Component {
   render() {
     return (
       <div id="content">
-        <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
+        <p top="top">Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
         <div id="thumbnailPane">
           {samples_db[this.state.category].map((sample, index) => {
             return (
@@ -44,10 +44,12 @@ class Samples extends Component {
 
   updateCategory(props) {
     if (props.match && props.match.params && props.match.params.category) {
-      if (samples_db.hasOwnProperty(props.match.params.category)) {
+      if (samples_db.hasOwnProperty(props.match.params.category) && this.state.category !== props.match.params.category) {
         this.setState({
           category: props.match.params.category
         });
+        let topEl = document.querySelector('[top]');
+        topEl.scrollIntoView();
       }
     }
   }

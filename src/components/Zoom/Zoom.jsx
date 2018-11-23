@@ -33,7 +33,8 @@ class Zoom extends Component {
 
   closeShadow() {
     this.setState({
-      zoomed: false
+      zoomed: false,
+      zoomSrc: SPACER
     });
   }
 

@@ -3,22 +3,25 @@ import './About.css';
 
 class About extends Component {
 
-	componentDidMount() {
-		if (this.props.match.params.scroll) {
-			this.scrollToAnchor(this.props.match.params.scroll);
-		}
-	}
+  componentDidMount() {
+    if (this.props.match.params.scroll) {
+      this.scrollToAnchor(this.props.match.params.scroll);
+    }
+  }
 
-	componentDidUpdate() {
-		if (this.props.match.params.scroll) {
-			this.scrollToAnchor(this.props.match.params.scroll);
-		}
-	}
+  componentDidUpdate() {
+    if (this.props.match.params.scroll) {
+      this.scrollToAnchor(this.props.match.params.scroll);
+    }
+  }
 
-	scrollToAnchor(anchor) {
-	  let selector = '[name="' + anchor + '"]';
-	  setTimeout(() => 	document.querySelector(selector).scrollIntoView(), 0);
-	}
+  scrollToAnchor(anchor) {
+    let selector = '[name="' + anchor + '"]';
+    let element = document.querySelector(selector);
+    if (element) {
+      setTimeout(() =>   element.scrollIntoView(), 0);
+    }
+  }
 
   render() {
     return (
@@ -87,13 +90,13 @@ Classes in Quark, Illustrator and Photoshop, Tutorial in Director
 <p></p>
 <h1><a name="awards" href="#/about/awards"><img src="images/title_awards.gif" alt="Awards &amp; Honors" width="207" height="34" border="0"/></a></h1>
 <ul>
-	<li>Minnesota Fringe Festival - "Higgledy Piggledy" adapted and performed at Theatre de la Jeune Leune 2007</li>
-	<li>Winner Best Picture Book, San Diego Book Awards "Higgledy Piggledy", illustration Attitude Press 2006</li>
-	<li>Small Press Bookwatch Reviewer's Choice - "Higgledy Piggledy", illustration Attitude Press 2006</li>
-	<li>Educational Dealer's Parent's Choice Award for "Young Minds at Play", Art Direction 1997 Instructional Fair/TS Denison</li>
-	<li>National Library Association Award for Library Skills Series of 5 books I designed and illustrated, 1995 TS Denison</li>
-	<li>Dr. Toy Award - "Quick Games From Trash", Art Direction Instructional Fair/TS Denison</li>
-	<li>Parents Choice Award - "Art for the Very Young" Art Direction, illustration, design & concept Instructional Fair/TS Denison</li>
+  <li>Minnesota Fringe Festival - "Higgledy Piggledy" adapted and performed at Theatre de la Jeune Leune 2007</li>
+  <li>Winner Best Picture Book, San Diego Book Awards "Higgledy Piggledy", illustration Attitude Press 2006</li>
+  <li>Small Press Bookwatch Reviewer's Choice - "Higgledy Piggledy", illustration Attitude Press 2006</li>
+  <li>Educational Dealer's Parent's Choice Award for "Young Minds at Play", Art Direction 1997 Instructional Fair/TS Denison</li>
+  <li>National Library Association Award for Library Skills Series of 5 books I designed and illustrated, 1995 TS Denison</li>
+  <li>Dr. Toy Award - "Quick Games From Trash", Art Direction Instructional Fair/TS Denison</li>
+  <li>Parents Choice Award - "Art for the Very Young" Art Direction, illustration, design & concept Instructional Fair/TS Denison</li>
 </ul>
 
 <p>Winner, Hamlin Playground Design Competition, St. Paul, 1988</p>

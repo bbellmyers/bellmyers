@@ -1,5 +1,7 @@
 {
-	"childcolor": [
+	"childcolor": {
+			"desc": "Children's Color",
+			"samples": [
 		{
 			"thumbnail": "images/thumb_1_CoverMINI.jpg",
 			"full": "images/full_1_CoverMINI.jpg",
@@ -158,8 +160,10 @@
 			"title": "Snow White Wardrobe",
 			"subtitle": "",
 			"comments": "This image is also avilable for <a href='images/darcy_bell-myers_promo.pdf' target='popup'>download here</a>.  Feel free to share with your friends!"
-		}],
-    "childbw": [
+		}]},
+    "childbw": {
+			"desc": "Children's Black & White",
+			"samples": [
 		{
 			"full":"images/full_A_arabesque.jpg",
 			"thumbnail":"images/thumb_A_arabesque.jpg",
@@ -234,8 +238,10 @@
 			"full": "images/full_ducky.gif",
 			"thumbnail": "images/thumb_ducky.gif",
 			"alt": "Ducky"
-		}],
-	"editcolor": [
+		}]},
+	"editcolor": {
+		"desc": "Editorial Color",
+		"samples" : [
 		{
 			"full": "images/full_cake.jpg",
 			"thumbnail": "images/thumb_cake.jpg",
@@ -305,8 +311,10 @@
 			"title": "",
 			"subtitle": "",
 			"comments": ""
-		}],
-	"editbw": [
+		}]},
+	"editbw": {
+		"desc": "Editorial Black & White",
+		"samples" : [
 		{
 			"full":"images/full_bride.jpg",
 			"thumbnail": "images/thumb_bride.jpg",
@@ -331,8 +339,10 @@
 			"full":"images/full_srdaycare.jpg",
 			"thumbnail": "images/thumb_srdaycare.jpg",
 			"alt":"Senior Daycare"
-		}],
-	"digital": [
+		}]},
+	"digital": {
+		"desc": "Digital",
+		"samples" : [
 		{
 			"thumbnail": "images/thumb_PrincessMini.jpg",
 			"full": "images/full_PrincessMini.jpg",
@@ -384,8 +394,10 @@
 			"full": "images/full_taxi_late.jpg",
 			"thumbnail": "images/thumb_taxi_late.jpg",
 			"alt":""
-		}],
-	"design": [
+		}]},
+	"design": {
+		"desc": "Design",
+		"samples" :  [
 		{
 			"full": "images/full_ABC_Vowac.jpg",
 			"thumbnail": "images/thumb_ABC_Vowac.jpg",
@@ -475,5 +487,5 @@
 			"title": "",
 			"subtitle": "",
 			"comments": ""
-		}]
+		}]}
 }

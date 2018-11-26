@@ -4,6 +4,10 @@ html, body, iframe {
 	height:100%;
 }
 
+body {
+	position: relative;
+}
+
 iframe {
 	display:block;
 	width:100%;

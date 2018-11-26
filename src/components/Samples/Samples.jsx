@@ -15,9 +15,10 @@ class Samples extends Component {
   render() {
     return (
       <div id="content">
-        <p top="top">Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
+        <h2 top="top">{samples_db[this.state.category].desc}</h2>
+        <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
         <div id="thumbnailPane">
-          {samples_db[this.state.category].map((sample, index) => {
+          {samples_db[this.state.category].samples.map((sample, index) => {
             return (
               <div key={index} className="thumbnail">
                 <button onClick={() => { return this.loadImage(index); }} >

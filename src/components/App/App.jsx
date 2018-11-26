@@ -50,11 +50,11 @@ class App extends Component {
               <a target="_top" href="#/samples/childcolor">
                 <img className="logo_name" src={logo_name} border="0" alt="Darcy Bell-Myers Illustration & Design"/>
               </a>
+              <button className="headerlink" onClick={() => window.decrypt_and_email(0)}>{this.email}</button>
               <div id="flyline">
                 <img src={logo_flyline_1} width="34" height="51" alt="" />
                 <img src={logo_flyline_2} width="248" height="29" alt="" />
               </div>
-              <button className="headerlink" onClick={() => window.decrypt_and_email(0)}>{this.email}</button>
             </div>
             <div id="banner">&nbsp;</div>
             <button type="button" className="menubutton" onClick={() => this.showNavMenu(true)}></button>
@@ -100,7 +100,7 @@ class App extends Component {
 
   _navHandler() {
     if (this.state.navClosed === false && this.state.menuButtonVisible) {
-      this.showNavMenu(false);
+      setTimeout(this.showNavMenu(false), 500);
     }
   }
 

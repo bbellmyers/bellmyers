@@ -1,7 +1,7 @@
 .subnav {
-	margin: -4px 0 0 26px;
+	margin: -4px 0 0 24px;
 	padding: 6px;
-	width: 127px;
+	width: 129px;
 }
 
 .subnav a {
@@ -9,7 +9,7 @@
 	color: #662d91;
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-weight: normal;
-	width: 127px;
+	width: 135px;
     display: block;
 }
 
@@ -17,7 +17,7 @@
 	font-weight: bold;
 	background-image: url(../../images/subnav_arrow.gif);
 	background-repeat: no-repeat;
-	background-position: 114px 0;
+	background-position: 117px 0;
 }
 
 @media(max-width: 499px) {

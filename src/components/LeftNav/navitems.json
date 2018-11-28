@@ -24,6 +24,10 @@
       "desc": "Design",
       "route": "/samples/design"
     },
+    {
+      "desc": "Patterns & Borders",
+      "route": "/samples/patterns"
+    },
     { "desc": "Animation",
       "route": "/samples/animation"
     }

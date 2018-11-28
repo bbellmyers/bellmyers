@@ -55,8 +55,8 @@ class Zoom extends Component {
 
     comp.setState({
       zoomed: true,
-      zoomWidth: reducedWidth,
-      zoomHeight: reducedHeight
+      zoomWidth: reducedWidth + 8,
+      zoomHeight: reducedHeight + 8
     });
   }
 

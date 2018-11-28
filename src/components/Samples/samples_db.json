@@ -487,5 +487,39 @@
 			"title": "",
 			"subtitle": "",
 			"comments": ""
-		}]}
+		}]},
+	"patterns": {
+		"desc": "Patterns & Borders",
+		"samples" : [
+			{
+				"full": "images/full_pineBough_pattern.jpg",
+				"thumbnail": "images/thumb_pineBough_pattern.jpg",
+				"alt": "Pine Bough Pattern"
+   		},{
+				"full": "images/full_apple_stationery.jpg",
+				"thumbnail": "images/thumb_apple_stationery.jpg",
+				"alt": "Apple Stationery"
+			},{
+				"full": "images/full_doves.jpg",
+				"thumbnail": "images/thumb_doves.jpg",
+				"alt": "Doves Banner"
+			},{
+				"full": "images/full_neighbors_border.jpg",
+				"thumbnail": "images/thumb_neighbors_border.jpg",
+				"alt": "No Room for Neighbors Border"
+			},{
+				"full": "images/full_patty_border.jpg",
+				"thumbnail": "images/thumb_patty_border.jpg",
+				"alt": "Patty Saves the Day Border"
+			},{
+				"full": "images/full_recipe.jpg",
+				"thumbnail": "images/thumb_recipe.jpg",
+				"alt": "Recipe Border"
+			},{
+				"full": "images/full_winter_border.jpg",
+				"thumbnail": "images/thumb_winter_border.jpg",
+				"alt": "Winter Border"
+			}
+		]
+	}
 }

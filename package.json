@@ -1,7 +1,7 @@
 {
   "name": "bellmyers",
-  "homepage": "http://www.bellmyers.com/build",
-  "version": "0.1.0",
+  "homepage": "http://www.bellmyers.com/",
+  "version": "0.9.0",
   "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.0.0",

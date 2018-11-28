@@ -39,7 +39,9 @@ class Samples extends Component {
         <Zoom sample={this.state.zoomSample}
           zoomOut={() => this.zoomOut()}
           next={(event) => this.loadImage(this.state.zoomIndex + 1, event)}
-          prev={(event) => this.loadImage(this.state.zoomIndex - 1, event)}/>
+          prev={(event) => this.loadImage(this.state.zoomIndex - 1, event)}
+          showNext={this.state.zoomIndex < samples_db[this.state.category].samples.length - 1 }
+          showPrev={this.state.zoomIndex > 0} />
       </div>
     );
   }
@@ -72,6 +74,8 @@ class Samples extends Component {
         zoomSample: samples_db[this.state.category].samples[index],
         zoomIndex: index
       });
+    } else {
+      this.zoomOut();
     }
 
     event.stopPropagation();
@@ -79,7 +83,8 @@ class Samples extends Component {
 
   zoomOut() {
     this.setState({
-      zoomSample: {}
+      zoomSample: {},
+      zoomIndex: -1
     });
   }
 

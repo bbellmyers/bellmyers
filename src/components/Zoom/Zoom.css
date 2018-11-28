@@ -30,10 +30,25 @@
 #shadow button.prev,
 #shadow button.next {
   color: white;
-  font-weight: 900;
+  background-color: transparent;
   text-decoration: none;
   font-size: 32px;
-  padding: 0 6px;
+  z-index: 3;
+}
+
+#shadow button.prev:hover,
+#shadow button.next:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+#shadow button.prev {
+  margin-right: -2.8em;
+  padding: 0 1.9em 0 0.1em;
+}
+
+#shadow button.next {
+  margin-left: -2.8em;
+  padding: 0 0.1em 0 1.9em;
 }
 
 @media(max-width: 499px) {

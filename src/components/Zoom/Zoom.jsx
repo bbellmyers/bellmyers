@@ -15,13 +15,17 @@ class Zoom extends Component {
   render() {
     return (
       <div id="shadow" className={this.state.zoomed? "" : "closed"} onClick={() => this.closeShadow()}>
-        <div className="zoomPanel" style={{ width: this.state.zoomWidth + 50}}>
-          <button className="prev" onClick={(event) => this.prevSample(event)}>&lt;</button>
+        <div className="zoomPanel" style={{ width: this.state.zoomWidth }}>
+          {this.props.showPrev ?
+            <button className="prev" onClick={(event) => this.prevSample(event)}>&lang;</button>
+            : '' }
           <img border="0" alt="(c) copyright Darcy Bell-Myers"
             src={this.props.sample.full}
             style={{width: this.state.zoomWidth, height: this.state.zoomHeight}}
             onLoad={(event) => this.zoomFit(event, this)} />
-          <button className="next" onClick={(event) => this.nextSample(event)}>&gt;</button>
+          {this.props.showNext ?
+            <button className="next" onClick={(event) => this.nextSample(event)}>&rang;</button>
+            : '' }
         </div>
     </div>
     );
@@ -40,9 +44,11 @@ class Zoom extends Component {
     var zoom = event.target;
     let ratio = zoom.width / zoom.height;
 
+    // shrink to fit width, if necessary
     let reducedWidth = Math.min(zoom.width, window.innerWidth - 48);
     let reducedHeight = reducedWidth / ratio;
 
+    // if this is still too tall, shrink some more
     if (reducedHeight > window.innerHeight - 48) {
       reducedHeight = window.innerHeight - 48;
       reducedWidth = reducedHeight * ratio;
@@ -62,7 +68,6 @@ class Zoom extends Component {
       zoomHeight: window.innerHeight
     });
     this.props.prev(event);
-    event.stopPropagation();
   }
 
   nextSample(event) {
@@ -72,7 +77,6 @@ class Zoom extends Component {
       zoomHeight: window.innerHeight
     });
     this.props.next(event);
-    event.stopPropagation();
   }
 
 }

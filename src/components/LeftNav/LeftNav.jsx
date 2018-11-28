@@ -37,11 +37,11 @@ class LeftNav extends Component {
   }
 
   componentDidMount() {
-    this.findSub(this.props);
+    this.findSub(this.props, this);
   }
 
   componentWillReceiveProps(props) {
-    this.findSub(props);
+    this.findSub(props, this);
   }
 
   _selectedHandler(index, subindex) {
@@ -49,13 +49,13 @@ class LeftNav extends Component {
     this.props.onNav();
   }
 
-  findSub(props) {
+  findSub(props, comp) {
     let foundSub = -1;
     let foundItem = -1;
     subitems.some((item, index) => {
       // findIndex requires polyfill in IE
       foundSub = item.findIndex((subitem) => {
-        return subitem.route === props.history.location.pathname;
+        return props.history.location.pathname.indexOf(subitem.route) >= 0;
       });
       if (foundSub >= 0) {
         foundItem = index;
@@ -63,10 +63,8 @@ class LeftNav extends Component {
       }
       return false;
     });
-    // set state if loading from bookmark or home button, otherwise
-    // _selectedHandler already did it.
-    if (foundSub >= 0 && this.state.selectedSubitem !== foundSub) {
-      this.setState({
+    if (foundSub >= 0) {
+      comp.setState({
         selectedItem: foundItem,
         selectedSubitem: foundSub
       });

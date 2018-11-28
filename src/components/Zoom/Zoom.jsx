@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Swipeable from 'react-swipeable';
 import './Zoom.css';
 
 class Zoom extends Component {
@@ -14,6 +15,7 @@ class Zoom extends Component {
 
   render() {
     return (
+      <Swipeable onSwipedLeft={(event) => this.onSwipedLeft(event)} onSwipedRight={(event) => this.onSwipedRight(event)}>
       <div id="shadow" className={this.state.zoomed? "" : "closed"} onClick={() => this.closeShadow()}>
         <div className="zoomPanel" style={{ width: this.state.zoomWidth }}>
           {this.props.showPrev &&
@@ -27,7 +29,8 @@ class Zoom extends Component {
             <button className="next" onClick={(event) => this.nextSample(event)}>&rang;</button>
           }
         </div>
-    </div>
+      </div>
+      </Swipeable>
     );
   }
 
@@ -75,8 +78,12 @@ class Zoom extends Component {
     });
   }
 
-  resetZoom() {
+  onSwipedLeft(event) {
+    this.nextSample(event);
+  }
 
+  onSwipedRight(event) {
+    this.prevSample(event);
   }
 
 }

@@ -16,27 +16,23 @@ class Zoom extends Component {
     return (
       <div id="shadow" className={this.state.zoomed? "" : "closed"} onClick={() => this.closeShadow()}>
         <div className="zoomPanel" style={{ width: this.state.zoomWidth }}>
-          {this.props.showPrev ?
+          {this.props.showPrev &&
             <button className="prev" onClick={(event) => this.prevSample(event)}>&lang;</button>
-            : '' }
+          }
           <img border="0" alt="(c) copyright Darcy Bell-Myers"
             src={this.props.sample.full}
             style={{width: this.state.zoomWidth, height: this.state.zoomHeight}}
             onLoad={(event) => this.zoomFit(event, this)} />
-          {this.props.showNext ?
+          {this.props.showNext &&
             <button className="next" onClick={(event) => this.nextSample(event)}>&rang;</button>
-            : '' }
+          }
         </div>
     </div>
     );
   }
 
   closeShadow() {
-    this.setState({
-      zoomed: false,
-      zoomWidth: window.innerWidth,
-      zoomHeight: window.innerHeight
-    });
+    this.clearZoom();
     this.props.zoomOut();
   }
 
@@ -62,21 +58,25 @@ class Zoom extends Component {
   }
 
   prevSample(event) {
-    this.setState({
-      zoomed: false,
-      zoomWidth: window.innerWidth,
-      zoomHeight: window.innerHeight
-    });
+    this.clearZoom();
     this.props.prev(event);
   }
 
   nextSample(event) {
+    this.clearZoom();
+    this.props.next(event);
+  }
+
+  clearZoom() {
     this.setState({
       zoomed: false,
       zoomWidth: window.innerWidth,
       zoomHeight: window.innerHeight
     });
-    this.props.next(event);
+  }
+
+  resetZoom() {
+
   }
 
 }

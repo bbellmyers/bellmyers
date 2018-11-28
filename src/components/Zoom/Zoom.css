@@ -8,6 +8,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
@@ -34,6 +35,8 @@
   text-decoration: none;
   font-size: 32px;
   z-index: 3;
+  text-shadow: 3px 3px 3px #333;
+  margin:0;
 }
 
 #shadow button.prev:hover,

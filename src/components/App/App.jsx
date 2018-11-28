@@ -10,7 +10,6 @@ import Clients from '../Clients/Clients.jsx';
 import Contact from '../Contact/Contact.jsx';
 import Animation from '../Animation/Animation.jsx';
 import Working from '../Working/Working.jsx';
-import Zoom from '../Zoom/Zoom.jsx';
 
 import './App.css';
 import logo_flyline_1 from '../../images/logo_flyline_1.gif';
@@ -30,9 +29,7 @@ class App extends Component {
     this.maskEl = null;
     this.state = {
       menuButtonVisible: true,
-      navClosed: true,
-      zoomSample: {},
-      zoomed: false
+      navClosed: true
     };
   }
 
@@ -70,7 +67,7 @@ class App extends Component {
         <div id="contentFrame">
         <Switch>
           <Route path="/samples/animation" component={Animation} />
-          <Route path="/samples/:category?" render={(props) => <Samples {...props} zoomIn={(sample) => this.zoomIn(sample)} />} />
+          <Route path="/samples/:category?" component={Samples} />
           <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
           <Route path="/contact" component={Contact} />
@@ -80,8 +77,6 @@ class App extends Component {
           <Route component={RouteNotFound} />
         </Switch>
         </div>
-
-        <Zoom sample={this.state.zoomSample} zoomOut={() => this.zoomOut()}/>
 
         <div id="navmask" style={{ display: this.state.navClosed ? "none" : "block"}} onClick={() =>  this.showNavMenu(false)}></div>
 
@@ -109,20 +104,6 @@ class App extends Component {
       navClosed: !show
     });
   }
-
-  zoomIn(sample) {
-    this.setState({
-      zoomSample: sample
-    });
-  }
-
-  zoomOut() {
-    this.setState({
-      zoomSample: {}
-    });
-  }
-
-
 }
 
 function RouteNotFound() {

@@ -170,7 +170,6 @@
 #contentFrame {
   margin-left: 10px;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
   height: calc(100vh - 146px);
   padding: 0 0 10px 0;
 }

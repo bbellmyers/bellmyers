@@ -14,13 +14,16 @@ class Zoom extends Component {
 
   render() {
     return (
-      <button id="shadow" className={this.state.zoomed? "" : "closed"} onClick={() => this.closeShadow()}>
-          <img border="0" id="zoomZoomImage"
-          alt="(c) copyright Darcy Bell-Myers"
-          src={this.props.sample.full}
-          style={{width: this.state.zoomWidth, height: this.state.zoomHeight}}
-          onLoad={(event) => this.zoomFit(event, this)} />
-      </button>
+      <div id="shadow" className={this.state.zoomed? "" : "closed"} onClick={() => this.closeShadow()}>
+        <div className="zoomPanel" style={{ width: this.state.zoomWidth + 50}}>
+          <button className="prev" onClick={(event) => this.prevSample(event)}>&lt;</button>
+          <img border="0" alt="(c) copyright Darcy Bell-Myers"
+            src={this.props.sample.full}
+            style={{width: this.state.zoomWidth, height: this.state.zoomHeight}}
+            onLoad={(event) => this.zoomFit(event, this)} />
+          <button className="next" onClick={(event) => this.nextSample(event)}>&gt;</button>
+        </div>
+    </div>
     );
   }
 
@@ -50,6 +53,26 @@ class Zoom extends Component {
       zoomWidth: reducedWidth,
       zoomHeight: reducedHeight
     });
+  }
+
+  prevSample(event) {
+    this.setState({
+      zoomed: false,
+      zoomWidth: window.innerWidth,
+      zoomHeight: window.innerHeight
+    });
+    this.props.prev(event);
+    event.stopPropagation();
+  }
+
+  nextSample(event) {
+    this.setState({
+      zoomed: false,
+      zoomWidth: window.innerWidth,
+      zoomHeight: window.innerHeight
+    });
+    this.props.next(event);
+    event.stopPropagation();
   }
 
 }

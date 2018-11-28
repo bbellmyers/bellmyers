@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import samples_db from './samples_db.json';
+import Zoom from '../Zoom/Zoom.jsx';
 import './Samples.css';
 
 class Samples extends Component {
@@ -8,29 +9,37 @@ class Samples extends Component {
     super();
 
     this.state = {
-      category: 'childcolor'
+      category: 'childcolor',
+      zoomSample: {},
+      zoomIndex: -1
     };
   }
 
   render() {
     return (
-      <div id="content">
-        <h2 top="top">{samples_db[this.state.category].desc}</h2>
-        <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
-        <div id="thumbnailPane">
-          {samples_db[this.state.category].samples.map((sample, index) => {
-            return (
-              <div key={index} className="thumbnail">
-                <button onClick={() => { return this.loadImage(index); }} >
-                  <img src={sample.thumbnail} alt="copyright Darcy Bell-Myers" border="3"/>
-                </button>
-              </div>
-            );
-          })}
+      <div>
+        <div id="content">
+          <h2 top="top">{samples_db[this.state.category].desc}</h2>
+          <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
+          <div id="thumbnailPane">
+            {samples_db[this.state.category].samples.map((sample, index) => {
+              return (
+                <div key={index} className="thumbnail">
+                  <button onClick={(event) => this.loadImage(index, event)} >
+                    <img src={sample.thumbnail} alt="copyright Darcy Bell-Myers" border="3"/>
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+          <p className="copyright">(These images are copyrighted, and are provided only for viewing on this site.
+            Please do not reproduce them, or use them for any other purpose.  Thank you.)
+          </p>
         </div>
-        <p className="copyright">(These images are copyrighted, and are provided only for viewing on this site.
-          Please do not reproduce them, or use them for any other purpose.  Thank you.)
-        </p>
+        <Zoom sample={this.state.zoomSample}
+          zoomOut={() => this.zoomOut()}
+          next={(event) => this.loadImage(this.state.zoomIndex + 1, event)}
+          prev={(event) => this.loadImage(this.state.zoomIndex - 1, event)}/>
       </div>
     );
   }
@@ -55,18 +64,25 @@ class Samples extends Component {
     }
   }
 
-  loadImage(index) {
-    let sample;
-    if (!index) {
-      sample = samples_db[this.state.category][0];
-    } else {
-      sample = samples_db[this.state.category][index];
+  loadImage(index, event) {
+    index = index ? index : 0;
+
+    if (index >= 0 && index < samples_db[this.state.category].samples.length) {
+      this.setState({
+        zoomSample: samples_db[this.state.category].samples[index],
+        zoomIndex: index
+      });
     }
 
-    this.props.zoomIn(sample);
-
-    return false;
+    event.stopPropagation();
   }
+
+  zoomOut() {
+    this.setState({
+      zoomSample: {}
+    });
+  }
+
 }
 
 export default Samples;

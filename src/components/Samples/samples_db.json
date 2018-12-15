@@ -519,6 +519,26 @@
 				"full": "images/full_winter_border.jpg",
 				"thumbnail": "images/thumb_winter_border.jpg",
 				"alt": "Winter Border"
+			},{
+				"full": "images/full_Needles_blue_mini.jpg",
+				"thumbnail": "images/thumb_Needles_blue_mini.jpg",
+				"alt": "Needles Blue"
+			},{
+				"full": "images/full_Needles_green_mini.jpg",
+				"thumbnail": "images/thumb_Needles_green_mini.jpg",
+				"alt": "Needles Green"
+			},{
+				"full": "images/full_Needles_red_mini.jpg",
+				"thumbnail": "images/thumb_Needles_red_mini.jpg",
+				"alt": "Needles Red"
+			},{
+				"full": "images/full_TennisBall_blue_mini.jpg",
+				"thumbnail": "images/thumb_TennisBall_blue_mini.jpg",
+				"alt": "TennisBall Blue"
+			},{
+				"full": "images/full_TennisBall_pink_mini.jpg",
+			  "thumbnail": "images/thumb_TennisBall_pink_mini.jpg",
+				"alt": "Needles Pink"
 			}
 		]
 	}

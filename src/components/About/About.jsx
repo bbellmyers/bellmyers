@@ -102,6 +102,8 @@ Classes in Quark, Illustrator and Photoshop, Tutorial in Director
 <p>Winner, Hamlin Playground Design Competition, St. Paul, 1988</p>
 <p>Art in the Workplace I & II, Show Target Headquarters, 1989 & 1990</p>
 <p>Honorable Mention, Merit Scholarship Competition, MCAD</p>
+<p>Member of the <a href="https://www.scbwi.org/members-public/darcy-bell-myers">Society
+ of Children's Book Writers and Illustrators</a></p>
 
 </div>
         );

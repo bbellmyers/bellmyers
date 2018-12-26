@@ -78,7 +78,7 @@ class App extends Component {
         </Switch>
         </div>
 
-        <div id="navmask" style={{ display: this.state.navClosed ? "none" : "block"}} onClick={() =>  this.showNavMenu(false)}></div>
+        <div id="navmask" className={this.state.navClosed ? "closed" : ""} onClick={() =>  this.showNavMenu(false)}></div>
 
       </div>
       </Router>

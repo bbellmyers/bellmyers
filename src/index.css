@@ -33,12 +33,12 @@ button:active{
 body, td{
 	font-size: 14px;
 	color: black;
-	font-family: Times, Timew New Roman, New York, serif;
+	font-family: Times, "Times New Roman", "New York", serif;
 }
 
 a:link, button {
 	color: #672D91;
-	font-family: Times, Times New Roman, New York, serif;
+	font-family: Times, "Times New Roman," "New York", serif;
 	cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ a:visited, button:visited {
 	COLOR: #672D91;
 }
 
-@media(min-width: 500px) {
+@media(min-width: 568px) {
 	body.shell {
 		background-image: url(images/back_leftbar.gif);
 		background-repeat: repeat-y;

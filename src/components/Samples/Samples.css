@@ -1,8 +1,19 @@
+#thumbnailPane {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  justify-content: space-between;
+}
+
+#thumbnailPane:after {
+  content: "";
+  flex: auto;
+}
+
 #thumbnailPane .thumbnail {
   position: relative;
   width: 108px;
   height: 108px;
-  float: left;
   margin: 0 16px 16px 0;
   display: flex;
   align-items: center;

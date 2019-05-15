@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Swipeable from 'react-swipeable';
-import './Zoom.css';
+import './Zoom.scss';
 
 class Zoom extends Component {
 

@@ -1,0 +1,63 @@
+#shadow {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  .zoomPanel {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &.closed {
+    display: none;
+  }
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid white;
+  }
+
+  button.prev,
+  button.next {
+    display: none;
+  }
+
+  @media(min-width: 568px) {
+    button.prev,
+    button.next {
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+      font-size: 32px;
+      z-index: 3;
+      text-shadow: 3px 3px 3px #333;
+      margin:0;
+      display: block;
+    }
+
+    button.prev:hover,
+    button.next:hover {
+      background-color: rgba(0,0,0,0.3);
+    }
+
+    button.prev {
+        margin-right: -2.8em;
+        padding: 0 1.9em 0 0.1em;
+    }
+
+    button.next {
+      margin-left: -2.8em;
+      padding: 0 0.1em 0 1.9em;
+    }
+  }
+}

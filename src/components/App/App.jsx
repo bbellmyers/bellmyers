@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import '@babel/polyfill';
+import samples_db from '../../samples_db.json';
 
 import LeftNav from '../LeftNav/LeftNav.jsx';
 import Samples from '../Samples/Samples.jsx';
@@ -10,8 +11,9 @@ import Clients from '../Clients/Clients.jsx';
 import Contact from '../Contact/Contact.jsx';
 import Animation from '../Animation/Animation.jsx';
 import Working from '../Working/Working.jsx';
+import Zoom from '../Zoom/Zoom.jsx';
 
-import './App.css';
+import './App.scss';
 import logo_flyline_1 from '../../images/logo_flyline_1.gif';
 import logo_flyline_2 from '../../images/logo_flyline_2.gif';
 import logo_butterfly_nav from '../../images/logo_butterfly_nav.gif';
@@ -29,11 +31,22 @@ class App extends Component {
     this.maskEl = null;
     this.state = {
       menuButtonVisible: true,
-      navClosed: true
+      navClosed: true,
+      zoomCategory: 'childcolor',
+      zoomSample: {},
+      zoomIndex: -1
+
     };
+
+    this.loadImage = this.loadImage.bind(this);
+    this.zoomNext = this.zoomNext.bind(this);
+    this.zoomPrev = this.zoomPrev.bind(this);
   }
 
   render() {
+    const { menuButtonVisible, navClosed, zoomIndex, zoomSample, zoomCategory } = this.state;
+    const showNext=zoomIndex < samples_db[zoomCategory].samples.length - 1;
+    const showPrev=zoomIndex > 0;
     return (
       <Router>
       <div id="wrapper">
@@ -58,7 +71,7 @@ class App extends Component {
           </div>
         </div>
 
-        <div id="leftnav" className={this.state.menuButtonVisible && this.state.navClosed ? "hide" : ""}>
+        <div id="leftnav" className={menuButtonVisible && navClosed ? "hide" : ""}>
           <button type="button" className="menubutton" onClick={() => this.showNavMenu(false)}></button>
           <img className="butterfly" src={logo_butterfly_nav} width="166" height="117" alt="butterfly" border="0" />
           <Route render={(props) => <LeftNav {...props} onNav={() => this._navHandler()} />} />
@@ -67,7 +80,9 @@ class App extends Component {
         <div id="contentFrame">
         <Switch>
           <Route path="/samples/animation" component={Animation} />
-          <Route path="/samples/:category?" component={Samples} />
+          <Route path="/samples/:category?" component={(props) => (
+            <Samples match={props.match} loadImage={this.loadImage} samples={samples_db} />
+          )} />
           <Route path="/about/:scroll?" component={About} />
           <Route path="/welcome" component={Welcome} />
           <Route path="/contact" component={Contact} />
@@ -78,7 +93,14 @@ class App extends Component {
         </Switch>
         </div>
 
-        <div id="navmask" className={this.state.navClosed ? "closed" : ""} onClick={() =>  this.showNavMenu(false)}></div>
+        <div id="navmask" className={navClosed ? "closed" : ""} onClick={() =>  this.showNavMenu(false)}></div>
+
+        <Zoom sample={zoomSample}
+          zoomOut={() => this.zoomOut()}
+          next={this.zoomNext}
+          prev={this.zoomPrev}
+          showNext={showNext}
+          showPrev={showPrev} />
 
       </div>
       </Router>
@@ -94,7 +116,8 @@ class App extends Component {
   }
 
   _navHandler() {
-    if (this.state.navClosed === false && this.state.menuButtonVisible) {
+    const { menuButtonVisible, navClosed } = this.state;
+    if (navClosed === false && menuButtonVisible) {
       setTimeout(this.showNavMenu(false), 500);
     }
   }
@@ -103,6 +126,41 @@ class App extends Component {
     this.setState({
       navClosed: !show
     });
+  }
+
+  loadImage(category, index, event) {
+    index = index ? index : 0;
+
+    if (index >= 0 && index < samples_db[category].samples.length) {
+      this.setState({
+        zoomCategory: category,
+        zoomSample: samples_db[category].samples[index],
+        zoomIndex: index
+      });
+    } else {
+      this.zoomOut();
+    }
+
+    event.stopPropagation();
+  }
+
+  zoomOut() {
+    this.setState({
+      zoomSample: {},
+      zoomIndex: -1
+    });
+  }
+
+  zoomNext(event) {
+    const { zoomCategory, zoomIndex } = this.state;
+    this.loadImage(zoomCategory, zoomIndex + 1, event);
+    event.stopPropagation();
+  }
+
+  zoomPrev(event) {
+    const { zoomCategory, zoomIndex } = this.state;
+    this.loadImage(zoomCategory, zoomIndex - 1, event);
+    event.stopPropagation();
   }
 }
 

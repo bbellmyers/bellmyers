@@ -11,21 +11,24 @@ class Zoom extends Component {
       zoomWidth: 0,
       zoomHeight: 0
     };
+    this.zoomFit = this.zoomFit.bind(this);
   }
 
   render() {
+    const { zoomed, zoomHeight, zoomWidth } = this.state;
+    const { sample, showPrev, showNext } = this.props;
     return (
       <Swipeable onSwipedLeft={(event) => this.onSwipedLeft(event)} onSwipedRight={(event) => this.onSwipedRight(event)}>
-      <div id="shadow" className={this.state.zoomed? "" : "closed"} onClick={() => this.closeShadow()}>
-        <div className="zoomPanel" style={{ width: this.state.zoomWidth }}>
-          {this.props.showPrev &&
+      <div id="shadow" className={zoomed ? null : 'closed'} onClick={() => this.closeShadow()}>
+        <div className="zoomPanel" style={{ width: zoomWidth }}>
+          {showPrev &&
             <button className="prev" onClick={(event) => this.prevSample(event)}>&lang;</button>
           }
           <img border="0" alt="(c) copyright Darcy Bell-Myers"
-            src={this.props.sample.full}
-            style={{width: this.state.zoomWidth, height: this.state.zoomHeight}}
-            onLoad={(event) => this.zoomFit(event, this)} />
-          {this.props.showNext &&
+            src={sample.full}
+            style={{width: zoomWidth, height: zoomHeight}}
+            onLoad={(event) => this.zoomFit(event)} />
+          {showNext &&
             <button className="next" onClick={(event) => this.nextSample(event)}>&rang;</button>
           }
         </div>
@@ -35,16 +38,20 @@ class Zoom extends Component {
   }
 
   closeShadow() {
-    this.clearZoom();
+    this.setState({
+      zoomed: false,
+      zoomWidth: window.innerWidth,
+      zoomHeight: window.innerHeight
+    });
     this.props.zoomOut();
   }
 
-  zoomFit(event, comp) {
+  zoomFit(event) {
     var zoom = event.target;
-    let ratio = zoom.width / zoom.height;
+    let ratio = zoom.naturalWidth / zoom.naturalHeight;
 
     // shrink to fit width, if necessary
-    let reducedWidth = Math.min(zoom.width, window.innerWidth - 48);
+    let reducedWidth = Math.min(zoom.naturalWidth, window.innerWidth - 48);
     let reducedHeight = reducedWidth / ratio;
 
     // if this is still too tall, shrink some more
@@ -53,7 +60,7 @@ class Zoom extends Component {
       reducedWidth = reducedHeight * ratio;
     }
 
-    comp.setState({
+    this.setState({
       zoomed: true,
       zoomWidth: reducedWidth + 8,
       zoomHeight: reducedHeight + 8
@@ -61,21 +68,11 @@ class Zoom extends Component {
   }
 
   prevSample(event) {
-    this.clearZoom();
     this.props.prev(event);
   }
 
   nextSample(event) {
-    this.clearZoom();
     this.props.next(event);
-  }
-
-  clearZoom() {
-    this.setState({
-      zoomed: false,
-      zoomWidth: window.innerWidth,
-      zoomHeight: window.innerHeight
-    });
   }
 
   onSwipedLeft(event) {

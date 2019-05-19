@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Samples.css';
+import './Samples.scss';
 
 class Samples extends Component {
 

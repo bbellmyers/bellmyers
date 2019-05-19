@@ -80,7 +80,7 @@ class App extends Component {
         <div id="contentFrame">
         <Switch>
           <Route path="/samples/animation" component={Animation} />
-          <Route path="/samples/:category?" component={(props) => (
+          <Route path="/samples/:category?" render={(props) => (
             <Samples match={props.match} loadImage={this.loadImage} samples={samples_db} />
           )} />
           <Route path="/about/:scroll?" component={About} />
@@ -130,11 +130,12 @@ class App extends Component {
 
   loadImage(category, index, event) {
     index = index ? index : 0;
+    const zoomSample = samples_db[category].samples[index];
 
-    if (index >= 0 && index < samples_db[category].samples.length) {
+    if (zoomSample) {
       this.setState({
         zoomCategory: category,
-        zoomSample: samples_db[category].samples[index],
+        zoomSample: zoomSample,
         zoomIndex: index
       });
     } else {

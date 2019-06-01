@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
-    "deploy": "rsync -rah build/* bbellmyers@bbellmyers.pairserver.com:public_html/bellmyers/"
+    "deploy": "npm run build; rsync -rah build/* bbellmyers@bbellmyers.pairserver.com:public_html/bellmyers/"
   },
   "eslintConfig": {
     "extends": "react-app"

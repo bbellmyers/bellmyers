@@ -53,7 +53,7 @@ class App extends Component {
         <div id="header">
           <iframe title="likebutton" id="fb_frame" src="http://www.facebook.com/plugins/like.php?app_id=104207449680616&amp;href=http%3A%2F%2Fwww.bellmyers.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameBorder="0" style={{border:'none', overflow:'hidden', height:21}} allowtransparency="true"></iframe>
           <div id="logo">
-            <a className="butterfly" target="_top" href="#/samples/childcolor">
+            <a className="header_butterfly" target="_top" href="#/samples/childcolor">
               <img id="butterflyImg" src={logo_butterfly_home} width="124" height="112" alt="butterfly" border="0" />
             </a>
             <div id="logowords">
@@ -61,7 +61,7 @@ class App extends Component {
                 <img className="logo_name" src={logo_name} border="0" alt="Darcy Bell-Myers Illustration & Design"/>
               </a>
               <button className="headerlink" onClick={() => window.decrypt_and_email(0)}>{this.email}</button>
-              <div id="flyline">
+              <div className="flyline">
                 <img src={logo_flyline_1} width="34" height="51" alt="" />
                 <img src={logo_flyline_2} width="248" height="29" alt="" />
               </div>
@@ -73,7 +73,7 @@ class App extends Component {
 
         <div id="leftnav" className={menuButtonVisible && navClosed ? "hide" : ""}>
           <button type="button" className="menubutton" onClick={() => this.showNavMenu(false)}></button>
-          <img className="butterfly" src={logo_butterfly_nav} width="166" height="117" alt="butterfly" border="0" />
+          <img className="nav_butterfly" src={logo_butterfly_nav} width="166" height="117" alt="butterfly" border="0" />
           <Route render={(props) => <LeftNav {...props} onNav={() => this._navHandler()} />} />
         </div>
 

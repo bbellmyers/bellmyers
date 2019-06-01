@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavItem from '../NavItem/NavItem';
 import subitems from './navitems.json';
-import './LeftNav.css';
+import './LeftNav.scss';
 
 
 class LeftNav extends Component {

@@ -29,11 +29,6 @@
 
 .thumbnail {
 	background-color: rgb(220, 217, 239);
-
-  & td {
-	padding: 6px;
-	padding-bottom: 0;
-}
 }
 
 .copyright {
@@ -41,4 +36,8 @@
   font-size: 0.8em;
   font-style: italic;
   padding-bottom: 12px;
+}
+
+#content.samples h2 {
+  padding-top: 0;
 }

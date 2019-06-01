@@ -15,7 +15,7 @@ class Samples extends Component {
     const { category } = this.state;
 
     return (
-      <div id="content">
+      <div id="content" className="samples">
         <h2 top="top">{samples[category].desc}</h2>
         <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
         <div id="thumbnailPane">

@@ -17,7 +17,7 @@ class Samples extends Component {
 
     return (
       <div id="content" className="samples">
-        <a name="sampletop" className="subheader">{samples[category].desc}</a>
+        <a href="#/samples/" name="sampletop" className="subheader">{samples[category].desc}</a>
         <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
         <div id="thumbnailPane">
           {samples[category].samples.map((sample, index) => {

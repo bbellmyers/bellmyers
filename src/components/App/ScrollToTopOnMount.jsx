@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 const scrollTo = (name) => {
   const pos = name ? document.querySelector(`[name='${name}']`).offsetTop : 0;
   const contentFrame = document.querySelector('#contentFrame');
+  const headerHeight = document.querySelector('#header').offsetHeight;
   if (contentFrame) {
-    setTimeout(() => contentFrame.scrollTo(0, pos - 124), 0);
+    setTimeout(() => contentFrame.scrollTo(0, pos - headerHeight), 0);
   }
 };
 

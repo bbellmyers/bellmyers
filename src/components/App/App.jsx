@@ -30,7 +30,6 @@ class App extends Component {
     this.email = window.decrypt_string(0,0,0,true);
     this.maskEl = null;
     this.state = {
-      menuButtonVisible: true,
       navClosed: true,
       zoomCategory: 'childcolor',
       zoomSample: {},
@@ -41,10 +40,11 @@ class App extends Component {
     this.loadImage = this.loadImage.bind(this);
     this.zoomNext = this.zoomNext.bind(this);
     this.zoomPrev = this.zoomPrev.bind(this);
+    this.isMenuButtonVisible = this.isMenuButtonVisible.bind(this);
   }
 
   render() {
-    const { menuButtonVisible, navClosed, zoomIndex, zoomSample, zoomCategory } = this.state;
+    const { navClosed, zoomIndex, zoomSample, zoomCategory } = this.state;
     const showNext=zoomIndex < samples_db[zoomCategory].samples.length - 1;
     const showPrev=zoomIndex > 0;
     return (
@@ -71,7 +71,7 @@ class App extends Component {
           </div>
         </div>
 
-        <div id="leftnav" className={menuButtonVisible && navClosed ? "hide" : ""}>
+        <div id="leftnav" className={navClosed ? "hide" : ""}>
           <button type="button" className="menubutton" onClick={() => this.showNavMenu(false)}></button>
           <img className="nav_butterfly" src={logo_butterfly_nav} width="166" height="117" alt="butterfly" border="0" />
           <Route render={(props) => <LeftNav {...props} onNav={() => this._navHandler()} />} />
@@ -107,16 +107,13 @@ class App extends Component {
     );
   }
 
-  componentDidMount() {
-    if (window.getComputedStyle(document.getElementsByClassName('menubutton')[0]).display === "none") {
-      this.setState({
-        menuButtonVisible: false
-      });
-    }
+  isMenuButtonVisible() {
+    return 'none' !== window.getComputedStyle(document.getElementsByClassName('menubutton')[0]).display;
   }
 
   _navHandler() {
-    const { menuButtonVisible, navClosed } = this.state;
+    const { navClosed } = this.state;
+    const menuButtonVisible = this.isMenuButtonVisible();
     if (navClosed === false && menuButtonVisible) {
       setTimeout(this.showNavMenu(false), 500);
     }

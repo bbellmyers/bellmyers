@@ -157,7 +157,8 @@
     width: 166px;
     float: left;
     position: static;
-    height: initial;
+    height: calc(100vh - 136px);
+    overflow: auto;
 
     .nav_butterfly {
       display: none;

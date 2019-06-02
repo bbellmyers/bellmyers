@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './Clients.css';
-import scrollToTop from '../App/ScrollToTopOnMount';
+import scrollOnMount from '../App/ScrollToTopOnMount';
 
 class Clients extends Component {
 
     render() {
         return (
             <div id="content">
-            <img top="top" src="images/title_clients.gif" alt="My Clients" width="132" height="34" border="0"/><br/>
+            <img src="images/title_clients.gif" alt="My Clients" width="132" height="34" border="0"/><br/>
             <div className="col1">
                 <span className="subheader">Book and other publishers:</span><br/>
                 Abrams Publishers<br/>
@@ -64,4 +64,4 @@ class Clients extends Component {
 
 }
 
-export default scrollToTop(Clients);
+export default scrollOnMount(Clients);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { scrollTo } from '../App/ScrollToTopOnMount';
 import './About.css';
 
 class About extends Component {
@@ -16,11 +17,7 @@ class About extends Component {
   }
 
   scrollToAnchor(anchor) {
-    let selector = '[name="' + anchor + '"]';
-    let element = document.querySelector(selector);
-    if (element) {
-      setTimeout(() =>   element.scrollIntoView(), 0);
-    }
+    scrollTo(anchor);
   }
 
   render() {
@@ -111,4 +108,3 @@ Classes in Quark, Illustrator and Photoshop, Tutorial in Director
 }
 
 export default About;
-

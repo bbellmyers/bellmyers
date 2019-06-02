@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Welcome.css';
-import scrollToTop from '../App/ScrollToTopOnMount';
+import scrollOnMount from '../App/ScrollToTopOnMount';
 
 class Welcome extends Component {
 
@@ -12,7 +12,7 @@ class Welcome extends Component {
   render() {
     return (
 <div id="content">
-	<img top="top" src="images/title_welcome.gif" alt="Welcome to my website!" width="291" height="34" border="0" /><br/>
+	<img src="images/title_welcome.gif" alt="Welcome to my website!" width="291" height="34" border="0" /><br/>
 	<img className="home_portrait" src="images/rhino.jpg" alt="rhino author" width="180" height="216" border="0" />
 	<p>
 	If you're an art director, publisher, graphic
@@ -54,4 +54,4 @@ class Welcome extends Component {
 
 }
 
-export default scrollToTop(Welcome);
+export default scrollOnMount(Welcome);

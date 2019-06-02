@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Samples.scss';
-import scrollToTop from '../App/ScrollToTopOnMount';
+import { scrollTo } from '../App/ScrollToTopOnMount';
 
 class Samples extends Component {
 
@@ -17,7 +17,7 @@ class Samples extends Component {
 
     return (
       <div id="content" className="samples">
-        <h2 top="top">{samples[category].desc}</h2>
+        <a name="sampletop" className="subheader">{samples[category].desc}</a>
         <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
         <div id="thumbnailPane">
           {samples[category].samples.map((sample, index) => {
@@ -55,11 +55,10 @@ class Samples extends Component {
         this.setState({
           category: matchedCategory
         });
-        let topEl = document.querySelector('[top]');
-        topEl.scrollIntoView();
+        scrollTo('sampletop');
       }
     }
   }
 }
 
-export default scrollToTop(Samples);
+export default Samples;

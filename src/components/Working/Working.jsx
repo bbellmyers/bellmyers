@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ScrollToTopOnMount from '../App/ScollToTopOnMount.jsx';
+import scrollOnMount from '../App/ScrollToTopOnMount';
 import './Working.css';
 
 class Working extends Component {
@@ -7,7 +7,6 @@ class Working extends Component {
   render() {
     return (
 <div id="content">
-<ScrollToTopOnMount/>
 <img top="top" src="images/title_working.gif" alt="Skills" width="212" height="34" border="0"/>
 	<p>
 	Over the years I've worked on a variety of projects in a variety of mediums,
@@ -59,5 +58,4 @@ class Working extends Component {
     }
 }
 
-export default Working;
-
+export default scrollOnMount(Working);

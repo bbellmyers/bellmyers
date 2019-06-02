@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Samples.scss';
+import scrollToTop from '../App/ScrollToTopOnMount';
 
 class Samples extends Component {
 
@@ -61,4 +62,4 @@ class Samples extends Component {
   }
 }
 
-export default Samples;
+export default scrollToTop(Samples);

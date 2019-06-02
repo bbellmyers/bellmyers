@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Animation.css';
+import scrollToTop from '../App/ScrollToTopOnMount';
 
 class Animation extends Component {
 
@@ -7,7 +8,7 @@ class Animation extends Component {
         return (
             <div id="content">
 
-            <div className="animation" align="center">
+            <div top="top" className="animation" align="center">
                 <video controls>
                 <source src="media/Animation_Demo_Reel.m4v" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -24,4 +25,4 @@ class Animation extends Component {
 
 }
 
-export default Animation;
+export default scrollToTop(Animation);

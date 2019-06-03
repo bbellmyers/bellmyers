@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './Welcome.css';
-import scrollOnMount from '../App/ScrollToTopOnMount';
+import scrollTo from '../App/ScrollToTopOnMount';
 
 class Welcome extends Component {
 
   constructor() {
     super();
     this.email = window.decrypt_string(0,0,0,true);
+  }
+
+	componentDidMount() {
+		this.props.scrollTo();
   }
 
   render() {
@@ -54,4 +58,4 @@ class Welcome extends Component {
 
 }
 
-export default scrollOnMount(Welcome);
+export default scrollTo(Welcome);

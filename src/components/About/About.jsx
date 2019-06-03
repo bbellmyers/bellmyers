@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { scrollTo } from '../App/ScrollToTopOnMount';
+import scrollTo from '../App/ScrollToTopOnMount';
 import './About.css';
 
 class About extends Component {
@@ -17,7 +17,7 @@ class About extends Component {
   }
 
   scrollToAnchor(anchor) {
-    scrollTo(anchor);
+    this.props.scrollTo(anchor);
   }
 
   render() {
@@ -107,4 +107,4 @@ Classes in Quark, Illustrator and Photoshop, Tutorial in Director
     }
 }
 
-export default About;
+export default scrollTo(About);

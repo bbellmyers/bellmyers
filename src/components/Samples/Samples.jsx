@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Samples.scss';
-import { scrollTo } from '../App/ScrollToTopOnMount';
+import scrollTo from '../App/ScrollToTopOnMount';
 
 class Samples extends Component {
 
@@ -11,13 +11,15 @@ class Samples extends Component {
     };
   }
 
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   render() {
     const { samples, loadImage } = this.props;
     const { category } = this.state;
 
     return (
       <div id="content" className="samples">
-        <a href="#/samples/" name="sampletop" className="subheader">{samples[category].desc}</a>
+
+        <a name="sampletop" className="subheader">{samples[category].desc}</a>
         <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
         <div id="thumbnailPane">
           {samples[category].samples.map((sample, index) => {
@@ -55,10 +57,10 @@ class Samples extends Component {
         this.setState({
           category: matchedCategory
         });
-        scrollTo('sampletop');
+        this.props.scrollTo('sampletop');
       }
     }
   }
 }
 
-export default Samples;
+export default scrollTo(Samples);

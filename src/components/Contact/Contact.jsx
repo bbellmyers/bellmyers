@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import './Contact.css';
-import scrollOnMount from '../App/ScrollToTopOnMount';
+import scrollTo from '../App/ScrollToTopOnMount';
 
 class Contact extends Component {
+
+    componentDidMount() {
+        this.props.scrollTo();
+    }
 
     render() {
         if (this.props.history.location.pathname.indexOf('/success') >= 0) {
@@ -152,4 +156,4 @@ class Contact extends Component {
 
 }
 
-export default scrollOnMount(Contact);
+export default scrollTo(Contact);

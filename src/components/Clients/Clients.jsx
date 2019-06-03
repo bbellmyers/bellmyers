@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './Clients.css';
-import scrollOnMount from '../App/ScrollToTopOnMount';
+import scrollTo from '../App/ScrollToTopOnMount';
 
 class Clients extends Component {
+    componentDidMount() {
+        this.props.scrollTo();
+    }
 
     render() {
         return (
@@ -64,4 +67,4 @@ class Clients extends Component {
 
 }
 
-export default scrollOnMount(Clients);
+export default scrollTo(Clients);

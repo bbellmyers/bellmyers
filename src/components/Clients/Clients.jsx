@@ -15,6 +15,7 @@ class Clients extends Component {
                 <span className="subheader">Book and other publishers:</span><br/>
                 Abrams Publishers<br/>
                 Attitude Press<br/>
+                Beaver&apos;s Pond Press<br/>
                 Continental Press<br/>
                 Instructional Fair <br/>
                 In Celebration<br/>

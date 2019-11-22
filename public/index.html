@@ -19,6 +19,23 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <form name="frmContact" method="post" netlify-honeypot data-netlify="true" hidden>
+      <input type="text" name="realname" size="30"/>
+      <input type="text" name="email" size="30"/>
+      <input type="text" name="title" size="30"/>
+      <input type="text" name="company" size="30"/>
+      <input type="text" name="street1" size="30"/>
+      <input type="text" name="street2" size="30"/>
+      <input type="text" name="city" size="30"/>
+      <input type="text" name="state" size="4"/>
+      <input type="text" name="zip" size="6"/>
+      <input type="text" name="country" size="30"/>
+      <input type="checkbox" name="mailinglist" value="add"/>&nbsp;add me to your mailing list.
+      <input type="checkbox" name="sendBWsamples" value="send"/> Black &amp; White
+      <input type="checkbox" name="sendColorSamples" value="send"/> Color
+      <input type="text" name="sendStyle" size="25"/>
+      <textarea name="comments" rows="8" cols="38"></textarea>
+    </form>
     <div id="root"></div>
   </body>
 </html>

@@ -1,0 +1,23 @@
+.frm-contact {
+  .required {
+    font-size: 18px;
+    color: #DD3C20;
+  }
+
+  input, textarea {
+    margin: 2px;
+    border: 1px solid #cccccc;
+  }
+
+  button[type="submit"] {
+    border-width: 0;
+    background: #662C91;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+  }
+
+}

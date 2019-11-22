@@ -8,6 +8,7 @@ class Contact extends Component {
     super(props);
     this.email = window.decrypt_string(0,0,0,true);
     this.state = {
+      'form-name': 'frmContact',
       realname: '',
       email: '',
       title: '',
@@ -23,7 +24,8 @@ class Contact extends Component {
       sendColorSamples: false,
       sendStyle: '',
       comments: '',
-      recipient: this.email
+      recipient: this.email,
+      sentSuccess: false
     };
     this.validateContactForm = this.validateContactForm.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -73,7 +75,15 @@ class Contact extends Component {
       alert('Sorry!  If you\'d like to be on my mailing list, \nplease provide a complete street address.');
       return false;
     }
-    console.log(this.encodeState(this.state));
+    this.sendForm().then((ok) => {
+      if (ok) {
+        this.setState({
+          sentSuccess: true
+        });
+      } else {
+        alert('Ooops, error sending your email, sorry!  Try again later?');
+      }
+    });
     return false;
   }
 
@@ -84,10 +94,20 @@ class Contact extends Component {
     return !value;
   }
 
+  async sendForm() {
+    console.log(this.encodeState(this.state));
+    const response = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encodeState(this.state)
+    });
+    return response.ok;
+  }
+
   render() {
     const { realname, email, title, company, street1, street2, city, usState,
-      zip, country, mailinglist, sendBWsamples, sendColorSamples, sendStyle, comments } = this.state;
-    if (this.props.history.location.pathname.indexOf('/success') >= 0) {
+      zip, country, mailinglist, sendBWsamples, sendColorSamples, sendStyle, comments, sentSuccess } = this.state;
+    if (sentSuccess) {
       return (
         <div id="content">
           <img src="images/title_contactme.gif" alt="Contact Me" width="145" height="34" border="0"/><br/>

@@ -59,7 +59,7 @@ class Contact extends Component {
 
   validateContactForm(event) {
     event.preventDefault();
-    const { realname, email, comments, company, street1, city, usState: state, zip, mailinglist } = this.state;
+    const { realname, email, comments, company, street1, city, usState, zip, mailinglist } = this.state;
     if (this.isBlank(realname) ||
       this.isBlank(email) ||
       this.isBlank(comments)) {
@@ -70,7 +70,7 @@ class Contact extends Component {
       (this.isBlank(company) ||
        this.isBlank(street1) ||
        this.isBlank(city) ||
-       this.isBlank(state) ||
+       this.isBlank(usState) ||
        this.isBlank(zip))) {
       alert('Sorry!  If you\'d like to be on my mailing list, \nplease provide a complete street address.');
       return false;

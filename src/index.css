@@ -1,87 +1,107 @@
 @font-face {
-  font-family: "Fink Heavy";
-  src: url("/fonts/FinkHeavy.eot");
-  src: url("/fonts/FinkHeavy.eot?#iefix") format("embedded-opentype"), url("/fonts/FinkHeavy.woff2") format("woff2"), url("/fonts/FinkHeavy.woff") format("woff"), url("/fonts/FinkHeavy.ttf") format("truetype");
+  font-family: 'Fink Heavy';
+  src: url('/fonts/FinkHeavy.eot');
+  src: url('/fonts/FinkHeavy.eot?#iefix') format('embedded-opentype'), url('/fonts/FinkHeavy.woff2') format('woff2'),
+    url('/fonts/FinkHeavy.woff') format('woff'), url('/fonts/FinkHeavy.ttf') format('truetype');
   font-style: normal;
 }
 
-html, body, iframe {
-	margin:0;
-	padding:0;
-	height:100%;
+html,
+body,
+iframe {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
-	position: relative;
+  position: relative;
 }
 
 iframe {
-	display:block;
-	width:100%;
-	border:none;
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+button,
+button:focus,
+button:active {
+  border-width: 0;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+body,
+td {
+  font-size: 14px;
+  color: black;
+  font-family: Times, 'Times New Roman', 'New York', serif;
+}
+
+a:link,
+button {
+  color: #672d91;
+  cursor: pointer;
+}
+
+a:hover,
+button:hover {
+  color: #dd3c20;
+}
+
+a:visited,
+button:visited {
+  color: #672d91;
 }
 
 h1 {
-	padding: 0;
+  padding: 2px 0;
   margin: 0;
-  font-family: "Fink Heavy";
-  color: #662C91;
+  position: relative;
+  top: 2px;
+  font-family: 'Fink Heavy';
+  color: #662c91;
   text-shadow: -2px 3px 2px rgba(128, 128, 128, 0.5);
   font-weight: 100;
   font-size: 29px;
 }
 
-button,
-button:focus,
-button:active{
-    border-width: 0;
-    background: transparent;
-    outline: none;
-    padding: 0;
-		font-size: 14px;
-		text-decoration: underline;
-	}
-
-body, td{
-	font-size: 14px;
-	color: black;
-	font-family: Times, "Times New Roman", "New York", serif;
+h1 a[name] {
+  text-decoration: none;
 }
 
-a:link, button {
-	color: #672D91;
-	font-family: Times, "Times New Roman," "New York", serif;
-	cursor: pointer;
+@media (min-width: 568px) {
+  body.shell {
+    background-image: url(images/back_leftbar.gif);
+    background-repeat: repeat-y;
+  }
 }
 
-a:hover, button:hover {
-	COLOR: #DD3C20;
+.subheader,
+h2 {
+  font-size: 14px;
+  color: black;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 1em 0 0;
 }
 
-a:visited, button:visited {
-	COLOR: #672D91;
-}
-
-@media(min-width: 568px) {
-	body.shell {
-		background-image: url(images/back_leftbar.gif);
-		background-repeat: repeat-y;
-	}
-}
-
-.subheader, h2 {
-	FONT-SIZE: 14px; COLOR: black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-WEIGHT: bold;
-	margin: 0;
-	padding: 1em 0 0;
-}
-
-.smallheader, h3 {
-	FONT-SIZE: 12px; COLOR:black; FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-WEIGHT: normal;
-	padding: 0 0 1em 0;
-	margin: 0;
+.smallheader,
+h3 {
+  font-size: 12px;
+  color: black;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding: 0 0 1em 0;
+  margin: 0;
 }
 
 p {
-	margin: 0 0 1em;
-	padding: 0px;
+  margin: 0 0 1em;
+  padding: 0px;
 }

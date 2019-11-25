@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Fink Heavy";
+  src: url("/fonts/FinkHeavy.eot");
+  src: url("/fonts/FinkHeavy.eot?#iefix") format("embedded-opentype"), url("/fonts/FinkHeavy.woff2") format("woff2"), url("/fonts/FinkHeavy.woff") format("woff"), url("/fonts/FinkHeavy.ttf") format("truetype");
+  font-style: normal;
+}
+
 html, body, iframe {
 	margin:0;
 	padding:0;
@@ -16,7 +23,12 @@ iframe {
 
 h1 {
 	padding: 0;
-	margin: 0;
+  margin: 0;
+  font-family: "Fink Heavy";
+  color: #662C91;
+  text-shadow: -2px 3px 2px rgba(128, 128, 128, 0.5);
+  font-weight: 100;
+  font-size: 29px;
 }
 
 button,

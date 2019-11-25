@@ -3,9 +3,7 @@ import NavItem from '../NavItem/NavItem';
 import subitems from './navitems.json';
 import './LeftNav.scss';
 
-
 class LeftNav extends Component {
-
   constructor() {
     super();
     this.contentIframe = null;
@@ -26,10 +24,14 @@ class LeftNav extends Component {
         {this.subitems.map((items, i) => {
           return (
             <li key={i}>
-              <NavItem items={items}
-                open={i === this.state.selectedItem ? true : false} index={i}
+              <NavItem
+                items={items}
+                open={i === this.state.selectedItem ? true : false}
+                index={i}
                 selected={this.state.selectedSubitem}
-                selectedHandler={(index, subindex) => this._selectedHandler(index, subindex)}/></li>
+                selectedHandler={(index, subindex) => this._selectedHandler(index, subindex)}
+              />
+            </li>
           );
         })}
       </ul>
@@ -45,7 +47,7 @@ class LeftNav extends Component {
   }
 
   _selectedHandler(index, subindex) {
-    this.setState({ selectedItem: index, selectedSubitem: subindex});
+    this.setState({ selectedItem: index, selectedSubitem: subindex });
     this.props.onNav();
   }
 
@@ -54,7 +56,7 @@ class LeftNav extends Component {
     let foundItem = -1;
     subitems.some((item, index) => {
       // findIndex requires polyfill in IE
-      foundSub = item.findIndex((subitem) => {
+      foundSub = item.findIndex(subitem => {
         return props.history.location.pathname.indexOf(subitem.route) >= 0;
       });
       if (foundSub >= 0) {

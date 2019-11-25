@@ -3,7 +3,6 @@ import './Samples.scss';
 import scrollTo from '../App/ScrollToTopOnMount';
 
 class Samples extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -18,22 +17,24 @@ class Samples extends Component {
 
     return (
       <div id="content" className="samples">
-
-        <a name="sampletop" className="subheader">{samples[category].desc}</a>
+        <a name="sampletop" className="subheader">
+          {samples[category].desc}
+        </a>
         <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
         <div id="thumbnailPane">
           {samples[category].samples.map((sample, index) => {
             return (
               <div key={index} className="thumbnail">
-                <button onClick={(event) => loadImage(category, index, event)} >
-                  <img src={sample.thumbnail} alt="copyright Darcy Bell-Myers" border="3"/>
+                <button onClick={event => loadImage(category, index, event)}>
+                  <img src={sample.thumbnail} alt="copyright Darcy Bell-Myers" border="3" />
                 </button>
               </div>
             );
           })}
         </div>
-        <p className="copyright">(These images are copyrighted, and are provided only for viewing on this site.
-          Please do not reproduce them, or use them for any other purpose.  Thank you.)
+        <p className="copyright">
+          (These images are copyrighted, and are provided only for viewing on this site. Please do not reproduce them,
+          or use them for any other purpose. Thank you.)
         </p>
       </div>
     );

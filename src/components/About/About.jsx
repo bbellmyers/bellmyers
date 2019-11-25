@@ -120,7 +120,7 @@ class About extends Component {
           type.
         </p>
         <h1>
-          <a name="education" href="#/about/experience">
+          <a name="education" href="#/about/education">
             Education
           </a>
         </h1>

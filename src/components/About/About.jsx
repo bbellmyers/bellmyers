@@ -22,11 +22,9 @@ class About extends Component {
   render() {
     return (
       <div id="content">
-        <h1>
-          <a name="skills" href="#/about/skills">
-            Skills
-          </a>
-        </h1>
+        <a name="skills" href="#/about/skills">
+          <h1>Skills</h1>
+        </a>
         <img
           className="home_portrait"
           src="images/mouse.jpg"
@@ -66,11 +64,9 @@ class About extends Component {
           graphics applications: Adobe InDesign, Photoshop, Illustrator, QuarkXPress, Fractal Painter, Macromedia
           Director, DeBabelizer, Adobe Dimensions, Adobe Streamline, Barcode Pro, FTP protocols/Fetch
         </p>
-        <h1>
-          <a name="experience" href="#/about/experience">
-            Experience
-          </a>
-        </h1>
+        <a name="experience" href="#/about/experience">
+          <h1>Experience</h1>
+        </a>
         <h2>Freelance Art Director, designer and illustrator 1990-present</h2>
         <h3>Darcy Bell-Myers Illustration & Design</h3>
         <p>
@@ -119,11 +115,9 @@ class About extends Component {
           daily, as well as producing detailed paste-ups, shooting stats, cutting amber-lith overlays and specifying
           type.
         </p>
-        <h1>
-          <a name="education" href="#/about/education">
-            Education
-          </a>
-        </h1>
+        <a name="education" href="#/about/education">
+          <h1>Education</h1>
+        </a>
         <h2>Minneapolis College of Art & Design</h2>
         BFA in Visual Communication, Graduated with honors 1989. Dean's List 1987 - 1989
         <h2>State University of New York at Purchase</h2>
@@ -133,11 +127,9 @@ class About extends Component {
         <h2>Hagen MicroAge</h2>
         Classes in Quark, Illustrator and Photoshop, Tutorial in Director
         <p></p>
-        <h1>
-          <a name="awards" href="#/about/awards">
-            Awards
-          </a>
-        </h1>
+        <a name="awards" href="#/about/awards">
+          <h1>Awards</h1>
+        </a>
         <ul>
           <li>
             Minnesota Fringe Festival - "Higgledy Piggledy" adapted and performed at Theatre de la Jeune Leune 2007

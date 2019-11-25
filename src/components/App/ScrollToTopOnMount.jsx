@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-const scrollTo = (WrappedComponent) =>
+const scrollTo = WrappedComponent =>
   class extends Component {
     scrollTo(name) {
-      const pos = name ? document.querySelector(`[name='${name}']`).offsetTop : 0;
+      const selector = `[name='${name}']`;
+      const pos = name ? document.querySelector(selector).offsetTop : 0;
       const contentFrame = document.querySelector('#contentFrame');
       const headerHeight = document.querySelector('#header').offsetHeight;
       if (contentFrame) {

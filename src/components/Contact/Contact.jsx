@@ -124,16 +124,14 @@ class Contact extends Component {
     if (sentSuccess) {
       return (
         <div id="content">
-          <img src="images/title_contactme.gif" alt="Contact Me" width="145" height="34" border="0" />
-          <br />
+          <h1>Contact Me</h1>
           Thanks for your note! I'll get back to you as soon as I can.
         </div>
       );
     } else {
       return (
         <div id="content" className="frm-contact">
-          <img src="images/title_contactme.gif" alt="Contact Me" width="145" height="34" border="0" />
-          <br />
+          <h1>Contact Me</h1>
           You can use the form below, or, if you prefer, you can send me an email at
           <button onClick={() => window.decrypt_and_email(0)}>{this.email}</button>.<br />(
           <span className="required">*</span> = required)

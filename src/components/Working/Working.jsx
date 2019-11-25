@@ -10,7 +10,7 @@ class Working extends Component {
   render() {
     return (
       <div id="content">
-        <img src="images/title_working.gif" alt="Skills" width="212" height="34" border="0" />
+        <h1>Working with me</h1>
         <p>
           Over the years I've worked on a variety of projects in a variety of mediums, though have come to specialize in
           making art for children. This does not mean that the work is less serious or important to me; indeed I

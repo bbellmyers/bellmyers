@@ -10,8 +10,7 @@ class Clients extends Component {
   render() {
     return (
       <div id="content">
-        <img src="images/title_clients.gif" alt="My Clients" width="132" height="34" border="0" />
-        <br />
+        <h1>Clients</h1>
         <div className="col1">
           <span className="subheader">Book and other publishers:</span>
           <br />

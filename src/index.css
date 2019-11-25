@@ -61,8 +61,6 @@ button:visited {
 h1 {
   padding: 2px 0;
   margin: 0;
-  position: relative;
-  top: 2px;
   font-family: 'Fink Heavy';
   color: #662c91;
   text-shadow: -2px 3px 2px rgba(128, 128, 128, 0.5);
@@ -70,7 +68,7 @@ h1 {
   font-size: 29px;
 }
 
-h1 a[name] {
+a[name] {
   text-decoration: none;
 }
 

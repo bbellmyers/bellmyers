@@ -3,7 +3,6 @@ import Swipeable from 'react-swipeable';
 import './Zoom.scss';
 
 class Zoom extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -18,21 +17,28 @@ class Zoom extends Component {
     const { zoomed, zoomHeight, zoomWidth } = this.state;
     const { sample, showPrev, showNext } = this.props;
     return (
-      <Swipeable onSwipedLeft={(event) => this.onSwipedLeft(event)} onSwipedRight={(event) => this.onSwipedRight(event)}>
-      <div id="shadow" className={zoomed ? null : 'closed'} onClick={() => this.closeShadow()}>
-        <div className="zoomPanel" style={{ width: zoomWidth }}>
-          {showPrev &&
-            <button className="prev" onClick={(event) => this.prevSample(event)}>&lang;</button>
-          }
-          <img border="0" alt="(c) copyright Darcy Bell-Myers"
-            src={sample.full}
-            style={{width: zoomWidth, height: zoomHeight}}
-            onLoad={(event) => this.zoomFit(event)} />
-          {showNext &&
-            <button className="next" onClick={(event) => this.nextSample(event)}>&rang;</button>
-          }
+      <Swipeable onSwipedLeft={event => this.onSwipedLeft(event)} onSwipedRight={event => this.onSwipedRight(event)}>
+        <div id="shadow" className={zoomed ? null : 'closed'} onClick={() => this.closeShadow()}>
+          <div className="zoomPanel" style={{ width: zoomWidth }}>
+            {showPrev && (
+              <button className="prev" onClick={event => this.prevSample(event)}>
+                &lang;
+              </button>
+            )}
+            <img
+              border="0"
+              alt="(c) copyright Darcy Bell-Myers"
+              src={sample.full}
+              style={{ width: zoomWidth, height: zoomHeight }}
+              onLoad={event => this.zoomFit(event)}
+            />
+            {showNext && (
+              <button className="next" onClick={event => this.nextSample(event)}>
+                &rang;
+              </button>
+            )}
+          </div>
         </div>
-      </div>
       </Swipeable>
     );
   }
@@ -82,7 +88,6 @@ class Zoom extends Component {
   onSwipedRight(event) {
     this.prevSample(event);
   }
-
 }
 
 export default Zoom;

@@ -21,6 +21,10 @@ class Samples extends Component {
           {samples[category].desc}
         </a>
         <p>Here are some samples of my work. Click on a thumbnail to see the full picture.</p>
+        <p>
+          (These images are copyrighted, and are provided only for viewing on this site. Please do not reproduce them,
+          or use them for any other purpose. Thank you.)
+        </p>
         <div id="thumbnailPane">
           {samples[category].samples.map((sample, index) => {
             return (
@@ -32,10 +36,6 @@ class Samples extends Component {
             );
           })}
         </div>
-        <p className="copyright">
-          (These images are copyrighted, and are provided only for viewing on this site. Please do not reproduce them,
-          or use them for any other purpose. Thank you.)
-        </p>
       </div>
     );
   }

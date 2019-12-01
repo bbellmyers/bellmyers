@@ -28,7 +28,11 @@ const NavItem = ({ name, open, index, items, selected, selectedHandler }) => {
   } else {
     return (
       <div id={`nav${index}-closed`} className="navClosed">
-        <a id={`nav${index}-0`} onClick={() => selectedHandler(index, 0)} href={`#${items[0].route}`}>
+        <a
+          className={`navName navName${index}`}
+          id={`nav${index}-0`}
+          onClick={() => selectedHandler(index, 0)}
+          href={`#${items[0].route}`}>
           <span className="name">{name}</span>
         </a>
       </div>

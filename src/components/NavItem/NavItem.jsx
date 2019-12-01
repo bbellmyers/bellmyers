@@ -1,12 +1,14 @@
 import React from 'react';
-import './NavItem.css';
+import './NavItem.scss';
 
-const NavItem = ({ open, index, items, selected, selectedHandler }) => {
+const NavItem = ({ name, open, index, items, selected, selectedHandler }) => {
   if (open) {
     return (
       <div id={`nav${index}-open`} className="navOpen">
-        <img src={'images/nav' + index + '_on.gif'} alt="" width="152" height="26" border="0" />
-        <img src={'images/nav' + index + '_sub.gif'} alt="" width="13" height="13" border="0" />
+        <div className={`navName navName${index}`}>
+          <span className="background"></span>
+          <span className="name">{name}</span>
+        </div>
         <div className={`subnav subnav${index}`}>
           {items.map((item, itemIndex) => {
             return (
@@ -27,7 +29,7 @@ const NavItem = ({ open, index, items, selected, selectedHandler }) => {
     return (
       <div id={`nav${index}-closed`} className="navClosed">
         <a id={`nav${index}-0`} onClick={() => selectedHandler(index, 0)} href={`#${items[0].route}`}>
-          <img src={'images/nav' + index + '_off.gif'} alt="" width="152" height="26" border="0" />
+          <span className="name">{name}</span>
         </a>
       </div>
     );

@@ -1,65 +1,57 @@
 [
-  [
-    {
-      "desc": "Children's Color",
-      "route": "/samples/childcolor"
-    },
-    {
-      "desc": "Children's B&W",
-      "route": "/samples/childbw"
-    },
-    {
-      "desc": "Editorial Color",
-      "route": "/samples/editcolor"
-    },
-    {
-      "desc": "Editorial B&W",
-      "route": "/samples/editbw"
-    },
-    {
-      "desc": "Digital",
-      "route": "/samples/digital"
-    },
-    {
-      "desc": "Design",
-      "route": "/samples/design"
-    },
-    {
-      "desc": "Patterns & Borders",
-      "route": "/samples/patterns"
-    },
-    { "desc": "Animation",
-      "route": "/samples/animation"
-    }
-  ],
-  [
-    { "desc": "Welcome",
-      "route": "/welcome"
-    },
-    { "desc": "Skills",
-      "route": "/about/skills"
-    },
-    { "desc": "Experience",
-      "route": "/about/experience"
-    },
-    { "desc": "Education",
-      "route": "/about/education"
-    },
-    { "desc": "Awards",
-      "route": "/about/awards"
-    }
-  ],
-  [
-    {"desc": "My Clients",
-      "route": "/clients/list"
-    },
-    { "desc": "Working with Me",
-      "route": "/clients/working"
-    }
-  ],
-  [
-    {"desc": "Contact Form",
-      "route": "/contact"
-    }
-  ]
+  {
+    "name": "Samples",
+    "subitems": [
+      {
+        "desc": "Children's Color",
+        "route": "/samples/childcolor"
+      },
+      {
+        "desc": "Children's B&W",
+        "route": "/samples/childbw"
+      },
+      {
+        "desc": "Editorial Color",
+        "route": "/samples/editcolor"
+      },
+      {
+        "desc": "Editorial B&W",
+        "route": "/samples/editbw"
+      },
+      {
+        "desc": "Digital",
+        "route": "/samples/digital"
+      },
+      {
+        "desc": "Design",
+        "route": "/samples/design"
+      },
+      {
+        "desc": "Patterns & Borders",
+        "route": "/samples/patterns"
+      },
+      { "desc": "Animation", "route": "/samples/animation" }
+    ]
+  },
+  {
+    "name": "About Me",
+    "subitems": [
+      { "desc": "Welcome", "route": "/welcome" },
+      { "desc": "Skills", "route": "/about/skills" },
+      { "desc": "Experience", "route": "/about/experience" },
+      { "desc": "Education", "route": "/about/education" },
+      { "desc": "Awards", "route": "/about/awards" }
+    ]
+  },
+  {
+    "name": "Clients",
+    "subitems": [
+      { "desc": "My Clients", "route": "/clients/list" },
+      { "desc": "Working with Me", "route": "/clients/working" }
+    ]
+  },
+  {
+    "name": "Contact Me",
+    "subitems": [{ "desc": "Contact Form", "route": "/contact" }]
+  }
 ]

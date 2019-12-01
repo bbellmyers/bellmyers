@@ -3,7 +3,7 @@
   flex-flow: row wrap;
 
   &::after {
-    content: "";
+    content: '';
     flex: auto;
   }
 
@@ -28,7 +28,11 @@
 }
 
 .thumbnail {
-	background-color: rgb(220, 217, 239);
+  background-color: rgb(220, 217, 239);
+
+  &:hover {
+    background-color: #ffcbdb;
+  }
 }
 
 .copyright {

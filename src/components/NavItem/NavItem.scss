@@ -1,0 +1,148 @@
+.navOpen {
+  .navName {
+    position: relative;
+    text-align: right;
+    width: 146px;
+    height: 26px;
+    margin-left: 7px;
+
+    .name {
+      line-height: 28px;
+      position: absolute;
+      right: 8px;
+      font-family: 'Fink Heavy';
+      color: white;
+      text-shadow: -1px 1px 0 black;
+      font-size: 20px;
+    }
+
+    .background {
+      position: absolute;
+      right: 0;
+      width: 39px;
+      height: 26px;
+    }
+
+    &.navName0 {
+      background-color: #8cc63f;
+      .background {
+        background-color: #c4df9b;
+      }
+    }
+
+    &.navName1 {
+      background-color: #e23d70;
+      .background {
+        background-color: #f29db7;
+      }
+    }
+
+    &.navName2 {
+      background-color: #ffce03;
+      .background {
+        background-color: #ffe393;
+      }
+    }
+
+    &.navName3 {
+      background-color: #a077f2;
+      .background {
+        background-color: #dac9ff;
+      }
+    }
+  }
+}
+
+.navClosed {
+  box-sizing: border-box;
+  width: 146px;
+  margin-left: 9px;
+  height: 26px;
+  line-height: 28px;
+
+  .navName {
+    color: white;
+    &:hover {
+      &.navName0 {
+        color: #8cc63f;
+      }
+
+      &.navName1 {
+        color: #e23d70;
+      }
+
+      &.navName2 {
+        color: #ffce03;
+      }
+
+      &.navName3 {
+        color: #a077f2;
+      }
+    }
+
+    .name {
+      font-family: 'Fink Heavy';
+      text-shadow: -2px 2px 0 black;
+      font-size: 20px;
+    }
+  }
+}
+
+.subnav {
+  margin: -13px 0 6px 24px;
+  padding: 19px 6px 6px;
+  width: 129px;
+}
+
+.subnav a {
+  font-size: 11px;
+  color: #662d91;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  width: 135px;
+  display: block;
+}
+
+.subnav a.selected {
+  font-weight: bold;
+  background-image: url(../../images/subnav_arrow.gif);
+  background-repeat: no-repeat;
+  background-position: 117px 0;
+}
+
+@media (max-width: 499px) {
+  .subnav a {
+    width: 124px;
+  }
+
+  .subnav a.selected {
+    font-weight: bold;
+    background-image: none;
+  }
+}
+
+.navOpen,
+.navClosed {
+  margin-bottom: 8px;
+}
+
+.navClosed a {
+  display: block;
+  text-decoration: none;
+}
+
+.subnav.subnav0 {
+  background-color: #dde9cb;
+}
+
+.subnav.subnav1 {
+  background-color: #ffcbdb;
+}
+
+.subnav.subnav2 {
+  background-color: #fff2cb;
+}
+
+.subnav.subnav3 {
+  background-color: #ede5ff;
+}

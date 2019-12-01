@@ -1,33 +1,29 @@
 import React, { Component } from 'react';
 import NavItem from '../NavItem/NavItem';
-import subitems from './navitems.json';
+import navitems from './navitems.json';
 import './LeftNav.scss';
 
 class LeftNav extends Component {
   constructor() {
     super();
-    this.contentIframe = null;
-    this.butterflyImg = null;
-    this.navmenu = null;
-
-    this.subitems = subitems;
-
     this.state = {
       selectedItem: 0,
       selectedSubitem: 0
     };
+    this.findSub = this.findSub.bind(this);
   }
 
   render() {
     return (
       <ul className="nav">
-        {this.subitems.map((items, i) => {
+        {navitems.map((item, index) => {
           return (
-            <li key={i}>
+            <li key={index}>
               <NavItem
-                items={items}
-                open={i === this.state.selectedItem ? true : false}
-                index={i}
+                name={item.name}
+                items={item.subitems}
+                open={index === this.state.selectedItem ? true : false}
+                index={index}
                 selected={this.state.selectedSubitem}
                 selectedHandler={(index, subindex) => this._selectedHandler(index, subindex)}
               />
@@ -39,11 +35,11 @@ class LeftNav extends Component {
   }
 
   componentDidMount() {
-    this.findSub(this.props, this);
+    this.findSub(this.props, navitems);
   }
 
   componentWillReceiveProps(props) {
-    this.findSub(props, this);
+    this.findSub(props, navitems);
   }
 
   _selectedHandler(index, subindex) {
@@ -51,12 +47,12 @@ class LeftNav extends Component {
     this.props.onNav();
   }
 
-  findSub(props, comp) {
+  findSub(props, navitems) {
     let foundSub = -1;
     let foundItem = -1;
-    subitems.some((item, index) => {
+    navitems.some((item, index) => {
       // findIndex requires polyfill in IE
-      foundSub = item.findIndex(subitem => {
+      foundSub = item.subitems.findIndex(subitem => {
         return props.history.location.pathname.indexOf(subitem.route) >= 0;
       });
       if (foundSub >= 0) {
@@ -66,7 +62,7 @@ class LeftNav extends Component {
       return false;
     });
     if (foundSub >= 0) {
-      comp.setState({
+      this.setState({
         selectedItem: foundItem,
         selectedSubitem: foundSub
       });

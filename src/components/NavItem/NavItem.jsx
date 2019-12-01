@@ -1,42 +1,43 @@
-import React, { Component } from 'react';
-import './NavItem.css';
+import React from 'react';
+import './NavItem.scss';
 
-class NavItem extends Component {
-  render() {
-    if (this.props.open) {
-      return (
-        <div id={'nav' + this.props.index + '-open'} className="navOpen">
-          <img src={'images/nav' + this.props.index + '_on.gif'} alt="" width="152" height="26" border="0" />
-          <img src={'images/nav' + this.props.index + '_sub.gif'} alt="" width="13" height="13" border="0" />
-          <div className={'subnav subnav' + this.props.index}>
-            {this.props.items.map((item, index) => {
-              return (
-                <a
-                  key={index}
-                  id={'subnav' + this.props.index + '-' + index}
-                  onClick={() => this.props.selectedHandler(this.props.index, index)}
-                  href={'#' + item.route}
-                  className={index === this.props.selected ? 'selected' : ''}>
-                  {item.desc}
-                </a>
-              );
-            })}
-          </div>
+const NavItem = ({ name, open, index, items, selected, selectedHandler }) => {
+  if (open) {
+    return (
+      <div id={`nav${index}-open`} className="navOpen">
+        <div className={`navName navName${index}`}>
+          <span className="background"></span>
+          <span className="name">{name}</span>
         </div>
-      );
-    } else {
-      return (
-        <div id={'nav' + this.props.index + '-closed'} className="navClosed">
-          <a
-            id={'nav' + this.props.index + '-0'}
-            onClick={() => this.props.selectedHandler(this.props.index, 0)}
-            href={'#' + this.props.items[0].route}>
-            <img src={'images/nav' + this.props.index + '_off.gif'} alt="" width="152" height="26" border="0" />
-          </a>
+        <div className={`subnav subnav${index}`}>
+          {items.map((item, itemIndex) => {
+            return (
+              <a
+                key={itemIndex}
+                id={`subnav${index}-${itemIndex}`}
+                onClick={() => selectedHandler(index, itemIndex)}
+                href={`#${item.route}`}
+                className={itemIndex === selected ? 'selected' : ''}>
+                {item.desc}
+              </a>
+            );
+          })}
         </div>
-      );
-    }
+      </div>
+    );
+  } else {
+    return (
+      <div id={`nav${index}-closed`} className="navClosed">
+        <a
+          className={`navName navName${index}`}
+          id={`nav${index}-0`}
+          onClick={() => selectedHandler(index, 0)}
+          href={`#${items[0].route}`}>
+          <span className="name">{name}</span>
+        </a>
+      </div>
+    );
   }
-}
+};
 
 export default NavItem;

@@ -1,545 +1,692 @@
 {
-	"childcolor": {
-			"desc": "Children's Color",
-			"samples": [
-		{
-			"thumbnail": "images/thumb_1_CoverMINI.jpg",
-			"full": "images/full_1_CoverMINI.jpg",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"thumbnail": "images/thumb_EmmyCovermini.jpg",
-			"full": "images/full_EmmyCovermini.jpg",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"thumbnail": "images/thumb_26_27EagleMINI.jpg",
-			"full": "images/full_26_27EagleMINI.jpg",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"thumbnail": "images/thumb_Treasure_4MINI.jpg",
-			"full": "images/full_Treasure_4MINI.jpg",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"thumbnail": "images/thumb_TreasureMini.jpg",
-			"full": "images/full_TreasureMini.jpg",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"thumbnail": "images/thumb_Treasure_8MINI.jpg",
-			"full": "images/full_Treasure_8MINI.jpg",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"thumbnail": "images/thumb_WillowMINI.jpg",
-			"full": "images/full_WillowMINI.jpg",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"thumbnail": "images/thumb_HigPig_cover.jpg",
-			"full": "images/full_HigPig_cover.jpg",
-			"title": "Higgledy Piggledy",
-			"subtitle": "by Christine D'Amico Johnson, Published by Attitude Press 2006",
-			"comments": ""
-		},{
-			"full":"images/full_higpig_1.jpg",
-			"title":"Higgledy Piggledy",
-			"subtitle":"by Christine D'Amico Johnson, Published by Attitude Press 2006",
-			"thumbnail":"images/thumb_higpig_1.jpg"
-		},{
-			"full":"images/full_higpig_2.jpg",
-			"title":"Higgledy Piggledy",
-			"subtitle":"by Christine D'Amico Johnson, Published by Attitude Press 2006",
-			"thumbnail":"images/thumb_higpig_2.jpg"
-		},{
-			"title":"Mumbo Jumbo",
-			"subtitle":"by Christine D'Amico Johnson, Published by Attitude Press 2010",
-			"full":"images/full_mumbo_jumbo.jpg",
-			"thumbnail":"images/thumb_Mumbo_cover.jpg"
-		},{
-			"full":"images/full_Storybook_cover.jpg",
-			"thumbnail":"images/thumb_Storybook_cover.jpg",
-			"alt":"Storybook Parties",
-			"title": "Storybook Parties",
-			"subtitle": "by Penny Warner and Lya Lev Oertel<br/>published by Meadowbrook Press 2001"
-		},{
-			"full":"images/full_StorybookParty.jpg",
-			"thumbnail":"images/thumb_StorybookParty.jpg",
-			"alt":"Storybook Parties",
-			"title": "Storybook Parties",
-			"subtitle": "by Penny Warner and Lya Lev Oertel<br/>published by Meadowbrook Press 2001"
-		},{
-			"full":"images/full_Neighbors_cover.jpg",
-			"thumbnail":"images/thumb_Neighbors_cover.jpg",
-			"alt":"No Time for Neighbors",
-			"title": "No Room for Neighbors",
-			"subtitle":"published by In Celebration, 1999",
-			"comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
-		},{
-			"full":"images/full_bandicoot1.jpg",
-			"thumbnail":"images/thumb_bandicoot1.jpg",
-			"alt":"No Time for Neighbors",
-			"title": "No Room for Neighbors",
-			"subtitle":"published by In Celebration, 1999",
-			"comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
-		},{
-			"full":"images/full_bandicoot7.jpg",
-			"thumbnail":"images/thumb_bandicoot7.jpg",
-			"alt":"No Time for Neighbors",
-			"title": "No Room for Neighbors",
-			"subtitle":"published by In Celebration, 1999",
-			"comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
-		},{
-			"full":"images/full_bandicoot9.jpg",
-			"thumbnail":"images/thumb_bandicoot9.jpg",
-			"alt":"No Time for Neighbors",
-			"title": "No Room for Neighbors",
-			"subtitle":"published by In Celebration, 1999",
-			"comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
-		},{
-			"full":"images/full_bandicoot10.jpg",
-			"thumbnail":"images/thumb_bandicoot10.jpg",
-			"alt":"No Time for Neighbors",
-			"title": "No Room for Neighbors",
-			"subtitle":"published by In Celebration, 1999",
-			"comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
-		},{
-			"full":"images/full_weewilly.jpg",
-			"thumbnail":"images/thumb_weewilly.jpg",
-			"alt":"Wee Willy Winky",
-			"title": "Wee Willy Winky",
-			"subtitle": "Published by Instructional Fair, 2000"
-		},{
-			"full":"images/full_heydiddle_2.jpg",
-			"thumbnail":"images/thumb_heydiddle.jpg",
-			"alt":"Hey Diddle Diddle",
-			"title": "Hey Diddle Diddle",
-			"subtitle": "Published by Instructional Fair, 2000"
-		},{
-			"full":"images/full_No_Fair_cover.jpg",
-			"thumbnail":"images/thumb_No_Fair_cover.jpg",
-			"alt":"",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full":"images/full_nofair1.jpg",
-			"thumbnail":"images/thumb_nofair1.jpg",
-			"alt":"No Fair"
-		},{
-			"full":"images/full_nofair2.jpg",
-			"thumbnail":"images/thumb_nofair2.jpg",
-			"alt":"No Fair"
-		},{
-			"full":"images/full_Patty_cover.jpg",
-			"thumbnail":"images/thumb_Patty_cover.jpg",
-			"alt":"",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full":"images/full_wardrobe_2.jpg",
-			"thumbnail":"images/thumb_wardrobe.jpg",
-			"alt":"Snow White Wardrobe",
-			"title": "Snow While Wardrobe",
-			"subtitle": "personal work, 1990<br/>oil on board",
-			"comments": "This is a wardrobe that opens to reveal doors and then smaller doors within which tell the story of Snow White as told by the brothers Grimm."
-		},{
-			"full":"images/full_snowhite-promo.jpg",
-			"thumbnail":"images/thumb_snowhite-promo.jpg",
-			"alt":"Snow White Wardrobe",
-			"title": "Snow White Wardrobe",
-			"subtitle": "",
-			"comments": "This image is also avilable for <a href='images/darcy_bell-myers_promo.pdf' target='popup'>download here</a>.  Feel free to share with your friends!"
-		}]},
-    "childbw": {
-			"desc": "Children's Black & White",
-			"samples": [
-		{
-			"full":"images/full_A_arabesque.jpg",
-			"thumbnail":"images/thumb_A_arabesque.jpg",
-			"alt":"",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full":"images/full_DoctorFoster.jpg",
-			"thumbnail":"images/thumb_DoctorFoster.jpg",
-			"alt":"",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full":"images/full_MistyMoisty.jpg",
-			"thumbnail":"images/thumb_MistyMoisty.jpg",
-			"alt":"",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_Reading-Readiness.jpg",
-			"thumbnail":"images/thumb_Reading-Readiness.jpg",
-			"alt": "Reading Readiness",
-			"title": "Reading Readiness",
-			"subtitle": "Signing on the palm, published by Continental Press 2007"
-
-		},{
-			"full": "images/full_mittens.jpg",
-			"thumbnail":"images/thumb_mittens.jpg",
-			"alt": "Mittens"
-		},{
-			"full": "images/full_cathat.jpg",
-			"thumbnail":"images/thumb_cathat.jpg",
-			"alt": "Cat in the Hat"
-		},{
-			"full": "images/full_moonstars.jpg",
-			"thumbnail":"images/thumb_moonstars.jpg",
-			"alt": "Moon and Stars"
-		},{
-			"full": "images/full_owl.jpg",
-			"thumbnail":"images/thumb_owl.jpg",
-			"alt": "Owl"
-		},{
-			"full": "images/full_chocolates.jpg",
-			"thumbnail":"images/thumb_chocolates.jpg",
-			"alt": "Chocolates"
-		},{
-			"full": "images/full_CuriousGeorgehat.jpg",
-			"thumbnail":"images/thumb_CuriousGeorgehat.jpg",
-			"alt": "Curious George Hat"
-		},{
-			"full": "images/full_Storybook-Parties-Curi.jpg",
-			"thumbnail":"images/thumb_Storybook-Parties-Cur.jpg",
-			"alt": "Storybook Parties",
-			"title": "Storybook Parties",
-			"subtitle": "\"Curious George\" art project, by Liya Lev Oertel, published by the Meadowbrook Press 2001"
-		},{
-			"full": "images/full_Storybook-Parties-Lion.jpg",
-			"thumbnail":"images/thumb_Storybook-Parties-Lio.jpg",
-			"alt": "Storybook Parties",
-			"title": "Storybook Parties",
-			"subtitle": "\"The Lion King\" art project, by Liya Lev Oertel, published by the Meadowbrook Press 2001"
-		},{
-			"full": "images/full_Teaching-real-Sculptur.jpg",
-			"thumbnail":"images/thumb_Teaching-real-Sculptu.jpg",
-			"alt": "Teaching Real Sculpture",
-			"title": "Teaching Real Sculpture",
-			"subtitle": "design and typography, written and illustrated by Darcy Bell-Myers, published by Instructional Fair 1997"
-		},{
-			"full": "images/full_ducky.gif",
-			"thumbnail": "images/thumb_ducky.gif",
-			"alt": "Ducky"
-		}]},
-	"editcolor": {
-		"desc": "Editorial Color",
-		"samples" : [
-		{
-			"full": "images/full_cake.jpg",
-			"thumbnail": "images/thumb_cake.jpg",
-			"alt": "Birthday Greeting Card"
-		},{
-			"full": "images/full_little_tree.jpg",
-			"thumbnail":"images/thumb_little_tree.jpg",
-			"alt":"\"Little Tree\"",
-			"title":"\"Little Tree\"",
-			"subtitle": "promotional piece, poem by ee cummings, holiday card 2007"
-		},{
-			"full": "images/full_grandmastoast.jpg",
-			"thumbnail":"images/thumb_grandmastoast.jpg",
-			"alt":"hey diddle diddle"
-		},{
-			"full": "images/full_cookies.jpg",
-			"thumbnail":"images/thumb_cookies.jpg",
-			"alt":"hey diddle diddle"
-		},{
-			"full": "images/full_discipline.jpg",
-			"thumbnail":"images/thumb_discipline.jpg",
-			"alt":"hey diddle diddle"
-		},{
-			"full": "images/full_egyptian_poem.jpg",
-			"thumbnail":"images/thumb_egyptian_poem.jpg",
-			"alt":"\"This Love is Good\"",
-			"title":"\"This Love is Good\"",
-			"subtitle": "private commission, ancient Egyptian poem 2003"
-		},{
-			"full": "images/full_FTMay2004.jpg",
-			"thumbnail":"images/thumb_FTMay2004.jpg",
-			"alt":""
-		},{
-			"full": "images/full_ftcover1.jpg",
-			"thumbnail":"images/thumb_ftcover1.jpg",
-			"alt": "\"How to Find and Keep a Good Babysitter\"",
-			"title": "\"How to Find and Keep a Good Babysitter\"",
-			"subtitle": "cover Family Times, April 2007",
-			"comments": "initial sketch"
-
-		},{
-			"full": "images/full_ftcover2.jpg",
-			"thumbnail":"images/thumb_ftcover2.jpg",
-			"alt": "\"How to Find and Keep a Good Babysitter\"",
-			"title": "\"How to Find and Keep a Good Babysitter\"",
-			"subtitle": "cover Family Times, April 2007",
-			"comments": "final painting"
-		},{
-			"full": "images/full_ftcover3.jpg",
-			"thumbnail":"images/thumb_ftcover3.jpg",
-			"alt": "\"How to Find and Keep a Good Babysitter\"",
-			"title": "\"How to Find and Keep a Good Babysitter\"",
-			"subtitle": "cover Family Times, April 2007",
-			"comments": "finished cover with type"
-		},{
-			"full": "images/full_apple_stationery.jpg",
-			"thumbnail": "images/thumb_apple_stationery.jpg",
-			"alt": "Apple Stationery"
-		},{
-			"full": "images/full_ballet.jpg",
-			"thumbnail": "images/thumb_ballet.jpg",
-			"alt": "Ballet"
-		},{
-			"full":"images/full_crowart.jpg",
-			"thumbnail":"images/thumb_crowart.jpg",
-			"alt":"",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		}]},
-	"editbw": {
-		"desc": "Editorial Black & White",
-		"samples" : [
-		{
-			"full":"images/full_bride.jpg",
-			"thumbnail": "images/thumb_bride.jpg",
-			"alt":"Bride"
-		},{
-			"full":"images/full_flowers.gif",
-			"thumbnail": "images/thumb_flowers.jpg",
-			"alt":"Flowers"
-		},{
-			"full":"images/full_capote.jpg",
-			"thumbnail": "images/thumb_capote.jpg",
-			"alt":"Flowers"
-		},{
-			"full":"images/full_angel.jpg",
-			"thumbnail": "images/thumb_angel.jpg",
-			"alt":"Angel"
-		},{
-			"full":"images/full_dadkids.jpg",
-			"thumbnail": "images/thumb_dadkids.jpg",
-			"alt":"Dad &amp; Kids"
-		},{
-			"full":"images/full_srdaycare.jpg",
-			"thumbnail": "images/thumb_srdaycare.jpg",
-			"alt":"Senior Daycare"
-		}]},
-	"digital": {
-		"desc": "Digital",
-		"samples" : [
-		{
-			"thumbnail": "images/thumb_PrincessMini.jpg",
-			"full": "images/full_PrincessMini.jpg",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_teddy.jpg",
-			"thumbnail": "images/thumb_teddy.jpg",
-			"alt":"Teddy Bears"
-		},{
-			"full": "images/full_duck.jpg",
-			"thumbnail": "images/thumb_duck.jpg",
-			"alt":""
-		},{
-			"full": "images/full_giraffe.jpg",
-			"thumbnail": "images/thumb_giraffe.jpg",
-			"alt":""
-		},
-		{
-			"full": "images/full_nest.jpg",
-			"thumbnail": "images/thumb_nest.jpg",
-			"alt":""
-		},{
-			"full": "images/full_fishpond.jpg",
-			"thumbnail": "images/thumb_fishpond.jpg",
-			"alt":""
-		},{
-			"full": "images/full_blackbirds.jpg",
-			"thumbnail": "images/thumb_blackbirds.jpg",
-			"alt":""
-		},{
-			"full": "images/full_farm_animals.jpg",
-			"thumbnail": "images/thumb_farm_animals.jpg",
-			"alt":""
-		},{
-			"full": "images/full_farm_bridge.jpg",
-			"thumbnail": "images/thumb_farm_bridge.jpg",
-			"alt":""
-		},{
-			"full": "images/full_taxi_station.jpg",
-			"thumbnail": "images/thumb_taxi_station.jpg",
-			"alt":""
-		},{
-			"full": "images/full_cars.jpg",
-			"thumbnail": "images/thumb_cars.jpg",
-			"alt":""
-		},{
-			"full": "images/full_taxi_late.jpg",
-			"thumbnail": "images/thumb_taxi_late.jpg",
-			"alt":""
-		}]},
-	"design": {
-		"desc": "Design",
-		"samples" :  [
-		{
-			"full": "images/full_ABC_Vowac.jpg",
-			"thumbnail": "images/thumb_ABC_Vowac.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_accounttemps.jpg",
-			"thumbnail": "images/thumb_accounttemps.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_art_for_young.jpg",
-			"thumbnail": "images/thumb_art_for_young.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_comet.jpg",
-			"thumbnail": "images/thumb_comet.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_compass.jpg",
-			"thumbnail": "images/thumb_compass.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_inside-math.jpg",
-			"thumbnail": "images/thumb_inside-math.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_leapfrog.jpg",
-			"thumbnail": "images/thumb_leapfrog.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_math_practice.jpg",
-			"thumbnail": "images/thumb_math_practice.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"title":"Mumbo Jumbo",
-			"subtitle":"by Christine D'Amico Johnson, Published by Attitude Press 2010",
-			"full":"images/full_mumbo_jumbo.jpg",
-			"thumbnail":"images/thumb_mumbo_jumbo.jpg"
-		},{
-			"full": "images/full_phys_ed.jpg",
-			"thumbnail": "images/thumb_phys_ed.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_science.jpg",
-			"thumbnail": "images/thumb_science.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_star.jpg",
-			"thumbnail": "images/thumb_star.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		},{
-			"full": "images/full_sun.jpg",
-			"thumbnail": "images/thumb_sun.jpg",
-			"alt": "",
-			"title": "",
-			"subtitle": "",
-			"comments": ""
-		}]},
-	"patterns": {
-		"desc": "Patterns & Borders",
-		"samples" : [
-			{
-				"full": "images/full_pineBough_pattern.jpg",
-				"thumbnail": "images/thumb_pineBough_pattern.jpg",
-				"alt": "Pine Bough Pattern"
-   		},{
-				"full": "images/full_apple_stationery.jpg",
-				"thumbnail": "images/thumb_apple_stationery.jpg",
-				"alt": "Apple Stationery"
-			},{
-				"full": "images/full_doves.jpg",
-				"thumbnail": "images/thumb_doves.jpg",
-				"alt": "Doves Banner"
-			},{
-				"full": "images/full_neighbors_border.jpg",
-				"thumbnail": "images/thumb_neighbors_border.jpg",
-				"alt": "No Room for Neighbors Border"
-			},{
-				"full": "images/full_patty_border.jpg",
-				"thumbnail": "images/thumb_patty_border.jpg",
-				"alt": "Patty Saves the Day Border"
-			},{
-				"full": "images/full_recipe.jpg",
-				"thumbnail": "images/thumb_recipe.jpg",
-				"alt": "Recipe Border"
-			},{
-				"full": "images/full_winter_border.jpg",
-				"thumbnail": "images/thumb_winter_border.jpg",
-				"alt": "Winter Border"
-			},{
-				"full": "images/full_Needles_blue_mini.jpg",
-				"thumbnail": "images/thumb_Needles_blue_mini.jpg",
-				"alt": "Needles Blue"
-			},{
-				"full": "images/full_Needles_green_mini.jpg",
-				"thumbnail": "images/thumb_Needles_green_mini.jpg",
-				"alt": "Needles Green"
-			},{
-				"full": "images/full_Needles_red_mini.jpg",
-				"thumbnail": "images/thumb_Needles_red_mini.jpg",
-				"alt": "Needles Red"
-			},{
-				"full": "images/full_TennisBall_blue_mini.jpg",
-				"thumbnail": "images/thumb_TennisBall_blue_mini.jpg",
-				"alt": "TennisBall Blue"
-			},{
-				"full": "images/full_TennisBall_pink_mini.jpg",
-			  "thumbnail": "images/thumb_TennisBall_pink_mini.jpg",
-				"alt": "Needles Pink"
-			}
-		]
-	}
+  "childcolor": {
+    "desc": "Children's Color",
+    "samples": [
+      {
+        "thumbnail": "images/thumb_shiva_cover.jpg",
+        "full": "images/full_shiva_cover.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_shiva_disguise.jpg",
+        "full": "images/full_shiva_disguise.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_needles_cover.jpg",
+        "full": "images/full_needles_cover.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_rabbit_in_snow.jpg",
+        "full": "images/full_rabbit_in_snow.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_christmas_trees.jpg",
+        "full": "images/full_christmas_trees.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_wyatt_title.jpg",
+        "full": "images/full_wyatt_title.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_wyatt_eggs.jpg",
+        "full": "images/full_wyatt_eggs.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_1_CoverMINI.jpg",
+        "full": "images/full_1_CoverMINI.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_EmmyCovermini.jpg",
+        "full": "images/full_EmmyCovermini.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_26_27EagleMINI.jpg",
+        "full": "images/full_26_27EagleMINI.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_Treasure_4MINI.jpg",
+        "full": "images/full_Treasure_4MINI.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_TreasureMini.jpg",
+        "full": "images/full_TreasureMini.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_Treasure_8MINI.jpg",
+        "full": "images/full_Treasure_8MINI.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_WillowMINI.jpg",
+        "full": "images/full_WillowMINI.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "thumbnail": "images/thumb_HigPig_cover.jpg",
+        "full": "images/full_HigPig_cover.jpg",
+        "title": "Higgledy Piggledy",
+        "subtitle": "by Christine D'Amico Johnson, Published by Attitude Press 2006",
+        "comments": ""
+      },
+      {
+        "full": "images/full_higpig_1.jpg",
+        "title": "Higgledy Piggledy",
+        "subtitle": "by Christine D'Amico Johnson, Published by Attitude Press 2006",
+        "thumbnail": "images/thumb_higpig_1.jpg"
+      },
+      {
+        "full": "images/full_higpig_2.jpg",
+        "title": "Higgledy Piggledy",
+        "subtitle": "by Christine D'Amico Johnson, Published by Attitude Press 2006",
+        "thumbnail": "images/thumb_higpig_2.jpg"
+      },
+      {
+        "title": "Mumbo Jumbo",
+        "subtitle": "by Christine D'Amico Johnson, Published by Attitude Press 2010",
+        "full": "images/full_mumbo_jumbo.jpg",
+        "thumbnail": "images/thumb_Mumbo_cover.jpg"
+      },
+      {
+        "full": "images/full_Storybook_cover.jpg",
+        "thumbnail": "images/thumb_Storybook_cover.jpg",
+        "alt": "Storybook Parties",
+        "title": "Storybook Parties",
+        "subtitle": "by Penny Warner and Lya Lev Oertel<br/>published by Meadowbrook Press 2001"
+      },
+      {
+        "full": "images/full_StorybookParty.jpg",
+        "thumbnail": "images/thumb_StorybookParty.jpg",
+        "alt": "Storybook Parties",
+        "title": "Storybook Parties",
+        "subtitle": "by Penny Warner and Lya Lev Oertel<br/>published by Meadowbrook Press 2001"
+      },
+      {
+        "full": "images/full_Neighbors_cover.jpg",
+        "thumbnail": "images/thumb_Neighbors_cover.jpg",
+        "alt": "No Time for Neighbors",
+        "title": "No Room for Neighbors",
+        "subtitle": "published by In Celebration, 1999",
+        "comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
+      },
+      {
+        "full": "images/full_bandicoot1.jpg",
+        "thumbnail": "images/thumb_bandicoot1.jpg",
+        "alt": "No Time for Neighbors",
+        "title": "No Room for Neighbors",
+        "subtitle": "published by In Celebration, 1999",
+        "comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
+      },
+      {
+        "full": "images/full_bandicoot7.jpg",
+        "thumbnail": "images/thumb_bandicoot7.jpg",
+        "alt": "No Time for Neighbors",
+        "title": "No Room for Neighbors",
+        "subtitle": "published by In Celebration, 1999",
+        "comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
+      },
+      {
+        "full": "images/full_bandicoot9.jpg",
+        "thumbnail": "images/thumb_bandicoot9.jpg",
+        "alt": "No Time for Neighbors",
+        "title": "No Room for Neighbors",
+        "subtitle": "published by In Celebration, 1999",
+        "comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
+      },
+      {
+        "full": "images/full_bandicoot10.jpg",
+        "thumbnail": "images/thumb_bandicoot10.jpg",
+        "alt": "No Time for Neighbors",
+        "title": "No Room for Neighbors",
+        "subtitle": "published by In Celebration, 1999",
+        "comments": "This was my first hardcover storybook and still my favorite. It's the story of a very solitary, very prickly Australian bandicoot who learns to love his neighbor"
+      },
+      {
+        "full": "images/full_weewilly.jpg",
+        "thumbnail": "images/thumb_weewilly.jpg",
+        "alt": "Wee Willy Winky",
+        "title": "Wee Willy Winky",
+        "subtitle": "Published by Instructional Fair, 2000"
+      },
+      {
+        "full": "images/full_heydiddle_2.jpg",
+        "thumbnail": "images/thumb_heydiddle.jpg",
+        "alt": "Hey Diddle Diddle",
+        "title": "Hey Diddle Diddle",
+        "subtitle": "Published by Instructional Fair, 2000"
+      },
+      {
+        "full": "images/full_No_Fair_cover.jpg",
+        "thumbnail": "images/thumb_No_Fair_cover.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_nofair1.jpg",
+        "thumbnail": "images/thumb_nofair1.jpg",
+        "alt": "No Fair"
+      },
+      {
+        "full": "images/full_nofair2.jpg",
+        "thumbnail": "images/thumb_nofair2.jpg",
+        "alt": "No Fair"
+      },
+      {
+        "full": "images/full_Patty_cover.jpg",
+        "thumbnail": "images/thumb_Patty_cover.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_wardrobe_2.jpg",
+        "thumbnail": "images/thumb_wardrobe.jpg",
+        "alt": "Snow White Wardrobe",
+        "title": "Snow While Wardrobe",
+        "subtitle": "personal work, 1990<br/>oil on board",
+        "comments": "This is a wardrobe that opens to reveal doors and then smaller doors within which tell the story of Snow White as told by the brothers Grimm."
+      },
+      {
+        "full": "images/full_snowhite-promo.jpg",
+        "thumbnail": "images/thumb_snowhite-promo.jpg",
+        "alt": "Snow White Wardrobe",
+        "title": "Snow White Wardrobe",
+        "subtitle": "",
+        "comments": "This image is also avilable for <a href='images/darcy_bell-myers_promo.pdf' target='popup'>download here</a>.  Feel free to share with your friends!"
+      }
+    ]
+  },
+  "childbw": {
+    "desc": "Children's Black & White",
+    "samples": [
+      {
+        "full": "images/full_A_arabesque.jpg",
+        "thumbnail": "images/thumb_A_arabesque.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_DoctorFoster.jpg",
+        "thumbnail": "images/thumb_DoctorFoster.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_MistyMoisty.jpg",
+        "thumbnail": "images/thumb_MistyMoisty.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_Reading-Readiness.jpg",
+        "thumbnail": "images/thumb_Reading-Readiness.jpg",
+        "alt": "Reading Readiness",
+        "title": "Reading Readiness",
+        "subtitle": "Signing on the palm, published by Continental Press 2007"
+      },
+      {
+        "full": "images/full_mittens.jpg",
+        "thumbnail": "images/thumb_mittens.jpg",
+        "alt": "Mittens"
+      },
+      {
+        "full": "images/full_cathat.jpg",
+        "thumbnail": "images/thumb_cathat.jpg",
+        "alt": "Cat in the Hat"
+      },
+      {
+        "full": "images/full_moonstars.jpg",
+        "thumbnail": "images/thumb_moonstars.jpg",
+        "alt": "Moon and Stars"
+      },
+      {
+        "full": "images/full_owl.jpg",
+        "thumbnail": "images/thumb_owl.jpg",
+        "alt": "Owl"
+      },
+      {
+        "full": "images/full_chocolates.jpg",
+        "thumbnail": "images/thumb_chocolates.jpg",
+        "alt": "Chocolates"
+      },
+      {
+        "full": "images/full_CuriousGeorgehat.jpg",
+        "thumbnail": "images/thumb_CuriousGeorgehat.jpg",
+        "alt": "Curious George Hat"
+      },
+      {
+        "full": "images/full_Storybook-Parties-Curi.jpg",
+        "thumbnail": "images/thumb_Storybook-Parties-Cur.jpg",
+        "alt": "Storybook Parties",
+        "title": "Storybook Parties",
+        "subtitle": "\"Curious George\" art project, by Liya Lev Oertel, published by the Meadowbrook Press 2001"
+      },
+      {
+        "full": "images/full_Storybook-Parties-Lion.jpg",
+        "thumbnail": "images/thumb_Storybook-Parties-Lio.jpg",
+        "alt": "Storybook Parties",
+        "title": "Storybook Parties",
+        "subtitle": "\"The Lion King\" art project, by Liya Lev Oertel, published by the Meadowbrook Press 2001"
+      },
+      {
+        "full": "images/full_Teaching-real-Sculptur.jpg",
+        "thumbnail": "images/thumb_Teaching-real-Sculptu.jpg",
+        "alt": "Teaching Real Sculpture",
+        "title": "Teaching Real Sculpture",
+        "subtitle": "design and typography, written and illustrated by Darcy Bell-Myers, published by Instructional Fair 1997"
+      },
+      {
+        "full": "images/full_ducky.gif",
+        "thumbnail": "images/thumb_ducky.gif",
+        "alt": "Ducky"
+      }
+    ]
+  },
+  "editcolor": {
+    "desc": "Editorial Color",
+    "samples": [
+      {
+        "full": "images/full_cake.jpg",
+        "thumbnail": "images/thumb_cake.jpg",
+        "alt": "Birthday Greeting Card"
+      },
+      {
+        "full": "images/full_little_tree.jpg",
+        "thumbnail": "images/thumb_little_tree.jpg",
+        "alt": "\"Little Tree\"",
+        "title": "\"Little Tree\"",
+        "subtitle": "promotional piece, poem by ee cummings, holiday card 2007"
+      },
+      {
+        "full": "images/full_grandmastoast.jpg",
+        "thumbnail": "images/thumb_grandmastoast.jpg",
+        "alt": "hey diddle diddle"
+      },
+      {
+        "full": "images/full_cookies.jpg",
+        "thumbnail": "images/thumb_cookies.jpg",
+        "alt": "hey diddle diddle"
+      },
+      {
+        "full": "images/full_discipline.jpg",
+        "thumbnail": "images/thumb_discipline.jpg",
+        "alt": "hey diddle diddle"
+      },
+      {
+        "full": "images/full_egyptian_poem.jpg",
+        "thumbnail": "images/thumb_egyptian_poem.jpg",
+        "alt": "\"This Love is Good\"",
+        "title": "\"This Love is Good\"",
+        "subtitle": "private commission, ancient Egyptian poem 2003"
+      },
+      {
+        "full": "images/full_FTMay2004.jpg",
+        "thumbnail": "images/thumb_FTMay2004.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_ftcover1.jpg",
+        "thumbnail": "images/thumb_ftcover1.jpg",
+        "alt": "\"How to Find and Keep a Good Babysitter\"",
+        "title": "\"How to Find and Keep a Good Babysitter\"",
+        "subtitle": "cover Family Times, April 2007",
+        "comments": "initial sketch"
+      },
+      {
+        "full": "images/full_ftcover2.jpg",
+        "thumbnail": "images/thumb_ftcover2.jpg",
+        "alt": "\"How to Find and Keep a Good Babysitter\"",
+        "title": "\"How to Find and Keep a Good Babysitter\"",
+        "subtitle": "cover Family Times, April 2007",
+        "comments": "final painting"
+      },
+      {
+        "full": "images/full_ftcover3.jpg",
+        "thumbnail": "images/thumb_ftcover3.jpg",
+        "alt": "\"How to Find and Keep a Good Babysitter\"",
+        "title": "\"How to Find and Keep a Good Babysitter\"",
+        "subtitle": "cover Family Times, April 2007",
+        "comments": "finished cover with type"
+      },
+      {
+        "full": "images/full_apple_stationery.jpg",
+        "thumbnail": "images/thumb_apple_stationery.jpg",
+        "alt": "Apple Stationery"
+      },
+      {
+        "full": "images/full_ballet.jpg",
+        "thumbnail": "images/thumb_ballet.jpg",
+        "alt": "Ballet"
+      },
+      {
+        "full": "images/full_crowart.jpg",
+        "thumbnail": "images/thumb_crowart.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      }
+    ]
+  },
+  "editbw": {
+    "desc": "Editorial Black & White",
+    "samples": [
+      {
+        "full": "images/full_bride.jpg",
+        "thumbnail": "images/thumb_bride.jpg",
+        "alt": "Bride"
+      },
+      {
+        "full": "images/full_flowers.gif",
+        "thumbnail": "images/thumb_flowers.jpg",
+        "alt": "Flowers"
+      },
+      {
+        "full": "images/full_capote.jpg",
+        "thumbnail": "images/thumb_capote.jpg",
+        "alt": "Flowers"
+      },
+      {
+        "full": "images/full_angel.jpg",
+        "thumbnail": "images/thumb_angel.jpg",
+        "alt": "Angel"
+      },
+      {
+        "full": "images/full_dadkids.jpg",
+        "thumbnail": "images/thumb_dadkids.jpg",
+        "alt": "Dad &amp; Kids"
+      },
+      {
+        "full": "images/full_srdaycare.jpg",
+        "thumbnail": "images/thumb_srdaycare.jpg",
+        "alt": "Senior Daycare"
+      }
+    ]
+  },
+  "digital": {
+    "desc": "Digital",
+    "samples": [
+      {
+        "thumbnail": "images/thumb_PrincessMini.jpg",
+        "full": "images/full_PrincessMini.jpg",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_teddy.jpg",
+        "thumbnail": "images/thumb_teddy.jpg",
+        "alt": "Teddy Bears"
+      },
+      {
+        "full": "images/full_duck.jpg",
+        "thumbnail": "images/thumb_duck.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_giraffe.jpg",
+        "thumbnail": "images/thumb_giraffe.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_nest.jpg",
+        "thumbnail": "images/thumb_nest.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_fishpond.jpg",
+        "thumbnail": "images/thumb_fishpond.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_blackbirds.jpg",
+        "thumbnail": "images/thumb_blackbirds.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_farm_animals.jpg",
+        "thumbnail": "images/thumb_farm_animals.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_farm_bridge.jpg",
+        "thumbnail": "images/thumb_farm_bridge.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_taxi_station.jpg",
+        "thumbnail": "images/thumb_taxi_station.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_cars.jpg",
+        "thumbnail": "images/thumb_cars.jpg",
+        "alt": ""
+      },
+      {
+        "full": "images/full_taxi_late.jpg",
+        "thumbnail": "images/thumb_taxi_late.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "design": {
+    "desc": "Design",
+    "samples": [
+      {
+        "full": "images/full_ABC_Vowac.jpg",
+        "thumbnail": "images/thumb_ABC_Vowac.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_accounttemps.jpg",
+        "thumbnail": "images/thumb_accounttemps.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_art_for_young.jpg",
+        "thumbnail": "images/thumb_art_for_young.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_comet.jpg",
+        "thumbnail": "images/thumb_comet.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_compass.jpg",
+        "thumbnail": "images/thumb_compass.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_inside-math.jpg",
+        "thumbnail": "images/thumb_inside-math.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_leapfrog.jpg",
+        "thumbnail": "images/thumb_leapfrog.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_math_practice.jpg",
+        "thumbnail": "images/thumb_math_practice.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "title": "Mumbo Jumbo",
+        "subtitle": "by Christine D'Amico Johnson, Published by Attitude Press 2010",
+        "full": "images/full_mumbo_jumbo.jpg",
+        "thumbnail": "images/thumb_mumbo_jumbo.jpg"
+      },
+      {
+        "full": "images/full_phys_ed.jpg",
+        "thumbnail": "images/thumb_phys_ed.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_science.jpg",
+        "thumbnail": "images/thumb_science.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_star.jpg",
+        "thumbnail": "images/thumb_star.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      },
+      {
+        "full": "images/full_sun.jpg",
+        "thumbnail": "images/thumb_sun.jpg",
+        "alt": "",
+        "title": "",
+        "subtitle": "",
+        "comments": ""
+      }
+    ]
+  },
+  "patterns": {
+    "desc": "Patterns & Borders",
+    "samples": [
+      {
+        "full": "images/full_pineBough_pattern.jpg",
+        "thumbnail": "images/thumb_pineBough_pattern.jpg",
+        "alt": "Pine Bough Pattern"
+      },
+      {
+        "full": "images/full_apple_stationery.jpg",
+        "thumbnail": "images/thumb_apple_stationery.jpg",
+        "alt": "Apple Stationery"
+      },
+      {
+        "full": "images/full_doves.jpg",
+        "thumbnail": "images/thumb_doves.jpg",
+        "alt": "Doves Banner"
+      },
+      {
+        "full": "images/full_neighbors_border.jpg",
+        "thumbnail": "images/thumb_neighbors_border.jpg",
+        "alt": "No Room for Neighbors Border"
+      },
+      {
+        "full": "images/full_patty_border.jpg",
+        "thumbnail": "images/thumb_patty_border.jpg",
+        "alt": "Patty Saves the Day Border"
+      },
+      {
+        "full": "images/full_recipe.jpg",
+        "thumbnail": "images/thumb_recipe.jpg",
+        "alt": "Recipe Border"
+      },
+      {
+        "full": "images/full_winter_border.jpg",
+        "thumbnail": "images/thumb_winter_border.jpg",
+        "alt": "Winter Border"
+      },
+      {
+        "full": "images/full_Needles_blue_mini.jpg",
+        "thumbnail": "images/thumb_Needles_blue_mini.jpg",
+        "alt": "Needles Blue"
+      },
+      {
+        "full": "images/full_Needles_green_mini.jpg",
+        "thumbnail": "images/thumb_Needles_green_mini.jpg",
+        "alt": "Needles Green"
+      },
+      {
+        "full": "images/full_Needles_red_mini.jpg",
+        "thumbnail": "images/thumb_Needles_red_mini.jpg",
+        "alt": "Needles Red"
+      },
+      {
+        "full": "images/full_TennisBall_blue_mini.jpg",
+        "thumbnail": "images/thumb_TennisBall_blue_mini.jpg",
+        "alt": "TennisBall Blue"
+      },
+      {
+        "full": "images/full_TennisBall_pink_mini.jpg",
+        "thumbnail": "images/thumb_TennisBall_pink_mini.jpg",
+        "alt": "Needles Pink"
+      }
+    ]
+  }
 }
